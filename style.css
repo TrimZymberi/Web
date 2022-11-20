@@ -1,54 +1,95 @@
+body {
+    background-color: rgb(44, 70, 44);
+}
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    }
     
+.logo { grid-area: 1 / 1 / 2 / 2;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-basis: auto;
+background-color: rgb(44, 70, 44);
+}
+.logo h1 {
+    font-family: 'rerossquadratic';
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #0000;
+    text-shadow: 
+      0 0 rgb(255, 255, 255), 
+      0 1.2em rgb(140, 222, 140);
+    overflow: hidden;
+    transition: 0.4s;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.logo h1:hover {
+    text-shadow: 
+    0 -1.2em #FFFF, 
+    0 0 rgb(140, 222, 140);
+}
+.logo p {
+    font-family: 'rerossquadratic',sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(44, 70, 44);
+    border: none;
+    transition: 0.4s;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.logo p:hover {
+    color: rgb(241, 255, 241);
 }
 
-body {
-background-image: url(gejmer.gif);
+.menu { grid-area: 1 / 2 / 2 / 5;
+background-color: rgb(44, 70, 44);
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 4;
-background-color: rgb(22, 27, 34);
-opacity: 90%;
-padding: 20px;
-font-size-adjust: 20px;
+.register { grid-area: 1 / 5 / 2 / 6; 
+display: flex;
+align-items: center;
+margin-left: 125px;
+background-color: rgb(44, 70, 44);
+}.register button {
+width: 180px;
+height: 60px;
+}
 
+.summary { grid-area: 2 / 5 / 6 / 6; 
+background-color: rgb(140, 222, 140);
 }
-.mainHeader {
-font-family: Calibri;
-font-size: 24px;
-font-weight: 600;
-color: aliceblue;
-font-style: none;
-text-decoration: none;
+.main { grid-area: 2 / 2 / 6 / 5; 
+background-color: rgb(92, 146, 92);
 }
-.registerButton {
-margin-bottom: 15px;
-margin-left: 20px;
-margin-top: 15px;
-display: block;
-font-size: 14px;
-padding: 10px;
-border: none;
-transition: background-color 0.07s;
-}.registerButton:hover {
-    background-color: rgb(136, 247, 124);
-    padding: 15px;
-    opacity: 100px;
+.misc { grid-area: 2 / 1 / 6 / 2;
+background-color: rgb(140, 222, 140);
+}
+.nav { grid-area: 4 / 2 / 5 / 5;
+background-color: rgb(140, 222, 140);
 }
 
 
-.div2 { grid-area: 1 / 4 / 2 / 6;
-background-color: rgb(22, 27, 34);
-opacity: 90%;
-}
-.div3 { grid-area: 2 / 1 / 5 / 6;
-background-color: rgb(13, 17, 23);
-}
-.div4 { grid-area: 5 / 1 / 6 / 6;
-background-color: rgb(22, 27, 34)
+@font-face {
+    font-family: 'rerossquadratic';
+    src: url(font/reross_quadratic-webfont.woff2) format('woff'),
+         url(font/reross_quadratic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
