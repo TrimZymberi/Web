@@ -81,27 +81,35 @@ header ul li a:hover, header ul li a.active {
     background: #fff;
     color: #000;
 }
+
+img {
+    border-radius: 20px;
+}
     
 .main { grid-area: 1 / 1 / 4 / 6; }
     
 .phr {
         grid-area: 2 / 1 / 4 / 4;
         display: flex;
-    }.phr  h3{
-        position: absolute;
-        top: 40%;
-        left: 5%;
+        border: 2px 2px red;
+        width: 1000px;
+        height: 200px;
+        
+    }h3{
+      display: flex;
+      position: absolute;
+      top: 40%;
+      left: 5%;
   
-        font-size: 40px;
-        background: linear-gradient(to right, #16b1b2,
+      font-size: 40px;
+      background: linear-gradient(to right, #16b1b2,
                     #c753b0, #ffa446, #f32170);
-        color: transparent;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
      
-        -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	    animation: focus-in-contract-bck 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }.phr p {
+    }.text {
         position: absolute;
         top: 50%;
         left: 5%;
@@ -118,12 +126,56 @@ header ul li a:hover, header ul li a.active {
         position: absolute;
         left: 5%;
     }.lower h4 {
-        font-size: 24px;
+        font-size: 32px;
+        text-align: center;
         background: linear-gradient(to right, #132d40,#7577f2);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-    }
-    
+}
+      
+.projects {
+  grid-area: 4 / 1 / 6 / 6;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  top: 150%;
+  left: 5%;
+}.projects img {
+  width: 30%;
+}
+
+.register { 
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-top: 95%;
+}button {
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(to right, #e77bff, #c57bff, #b47bff, #8a7bff,#7577f2);
+  transition: 0.1s; 
+  }button:hover {
+  padding: 21px;
+}
+
+references {
+  width:100%;
+  height: auto;
+  position: absolute;
+  margin-top: 101%;
+  text-align: center;
+}
+
+
+
+
+/*     
     .support-p {
         display: flex;
         top: 200%;
@@ -140,7 +192,7 @@ header ul li a:hover, header ul li a.active {
         transition: width 0.2s;
     }.support-img:hover {
         width: 31%;
-    }
+    } */
 
 
   
