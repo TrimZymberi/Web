@@ -6,7 +6,9 @@
 </head> 
 <body>
     <div class="parent">
+    
         <div class="main"> 
+    
             <header>
                 <a href="#" class="logo">alpe</a>
                 <ul>
@@ -16,13 +18,43 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </header>
+    
         </div>
         
         <div class="phr">
             <h3>Everyday you learn something new</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
-        <div class="lower"> </div>
+        <div class="lower">
+            <h4>
+                Our projects
+            </h4>
+        </div>
+        <div class="support-p">
+            <p class="support-p">Need help?</p>
+        </div>
+        <div class="support-img">
+            
+        </div>
+        <script>
+            window.addEventListener('mouseover', initLandbot, { once: true });
+            window.addEventListener('touchstart', initLandbot, { once: true });
+            var myLandbot;
+            function initLandbot() {
+              if (!myLandbot) {
+                var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+                s.addEventListener('load', function() {
+                  myLandbot = new Landbot.Popup({
+                    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1420476-T6IMYJJMZM3CIW6S/index.json',
+                  });
+                });
+                s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+              }
+            }
+            </script>
     </div>
 </body>
 </html>
