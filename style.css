@@ -13,7 +13,6 @@ body {
 display: flex;
 align-items: center;
 justify-content: space-evenly;
-flex-basis: auto;
 background-color: rgb(44, 70, 44);
 }
 .logo h1 {
@@ -41,13 +40,12 @@ background-color: rgb(44, 70, 44);
 }
 .logo p {
     font-family: 'rerossquadratic',sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     color: rgb(44, 70, 44);
     border: none;
-    transition: 0.4s;
-    
+    transition: color 0.2s,margin-left 0.4s;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -56,20 +54,43 @@ background-color: rgb(44, 70, 44);
     user-select: none;
 }.logo p:hover {
     color: rgb(241, 255, 241);
+    margin-left: 15px;
 }
 
 .menu { grid-area: 1 / 2 / 2 / 5;
-background-color: rgb(44, 70, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    float: left;
+    background-color: rgb(44, 70, 44);
+}.menu a{
+    color: #FFFF;
+    font-family: 'rerossquadratic',sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1 1 auto;
+}.menu li {
+    list-style-type: none;
+}
+.menu a:hover {
+    color: rgb(233, 231, 231);
 }
 
 .register { grid-area: 1 / 5 / 2 / 6; 
 display: flex;
 align-items: center;
-margin-left: 125px;
 background-color: rgb(44, 70, 44);
 }.register button {
-width: 180px;
-height: 60px;
+margin-left: 125px;
+width: 140px;
+height: 40px;
+transition: 0.4s;
+border: none;
+}.register button:hover {
+background-color: rgb(255, 38, 38);
 }
 
 .summary { grid-area: 2 / 5 / 6 / 6; 
@@ -85,7 +106,6 @@ background-color: rgb(140, 222, 140);
 background-color: rgb(140, 222, 140);
 }
 
-
 @font-face {
     font-family: 'rerossquadratic';
     src: url(font/reross_quadratic-webfont.woff2) format('woff'),
@@ -93,3 +113,4 @@ background-color: rgb(140, 222, 140);
     font-weight: normal;
     font-style: normal;
 }
+
