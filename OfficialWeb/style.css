@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+
 * {
-    font-family: Calibri;
+    font-family: 'Open Sans';
     text-decoration: none;
     list-style: none;
     color: black;
@@ -25,15 +27,18 @@ body {
 
 .menuList {
     border: 1px solid red;
+    font-weight: 400;
     width: 110px;
     height: 25px;
 }.menuList a:hover {
     background-color: rgb(255, 163, 163);
     padding: 10px;
     border-radius: 40px;
+    font-weight: 600;
 }
 
 #register {
+    font-weight: 400;
     border: 1px solid red;
     display: flex;
     position: absolute;
@@ -52,10 +57,39 @@ body {
     background-color: rgb(255, 163, 163);
     padding: 10px;
     border-radius: 40px;
+    font-weight: 600;
 }
-.main-icon {
+.main-search-icon {
+    background-color: transparent;
+    width: 13%;
+    align-items: center;
+}.main-icon:active {
+    padding: 5px;
+}.main-cart-icon {
+    background-color: transparent;
     width: 14%;
     align-items: center;
 }.main-icon:active {
     padding: 5px;
 }
+
+#opening {
+    border: 1px solid red;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    left: 20px;
+    top: 20%;
+}
+
+.opening-title img{
+    width: 40%;
+}
+
+.opening-title h1{
+    font-weight: 200;
+    width: 40%;
+}
+
