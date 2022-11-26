@@ -11,7 +11,6 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #eeebe0 20%, #f6ded0 100%); 
     background-image: linear-gradient(90deg, #fffbec 20%, #ffb387 100%);
     background-attachment: fixed;
 }
@@ -34,7 +33,7 @@ body {
     right: 30px;
     cursor: pointer;
     background-color: transparent;
-    color: rgb(54, 54, 54);
+    color: black;
     font-size: 25px;
     border-style: none;
     padding: 5px 8px;
@@ -50,8 +49,8 @@ body {
     margin-top: 5px;
     margin-left: 15px;
     font-weight: bold;
-    color: black;
-    font-weight: 400;
+    color: rgba(255, 255, 255, 255);
+    font-weight: 600;
     text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
 }
 
@@ -66,7 +65,7 @@ body {
 .nav-container li {
     text-align: center;
     margin: 15px auto;
-}
+} 
 
 a {
     font-size: 20px;
@@ -98,7 +97,6 @@ a {
 
 
 @media screen and (min-width: 930px) {
-    
     .navbar {
         display: flex;
         justify-content: space-between;
