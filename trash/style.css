@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(44, 70, 44);
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+.logo { grid-area: 1 / 1 / 2 / 2;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background-color: rgb(44, 70, 44);
+}
+.logo h1 {
+    font-family: 'rerossquadratic';
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #0000;
+    text-shadow: 
+      0 0 rgb(255, 255, 255), 
+      0 1.2em rgb(140, 222, 140);
+    overflow: hidden;
+    transition: 0.4s;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.logo h1:hover {
+    text-shadow: 
+    0 -1.2em #FFFF, 
+    0 0 rgb(140, 222, 140);
+}
+.logo p {
+    font-family: 'rerossquadratic',sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(44, 70, 44);
+    border: none;
+    transition: color 0.2s,margin-left 0.4s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.logo p:hover {
+    color: rgb(241, 255, 241);
+    margin-left: 15px;
+}
+
+.menu { grid-area: 1 / 2 / 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    float: left;
+    background-color: rgb(44, 70, 44);
+}.menu a{
+    color: #FFFF;
+    font-family: 'rerossquadratic',sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1 1 auto;
+}.menu li {
+    list-style-type: none;
+}
+.menu a:hover {
+    color: rgb(233, 231, 231);
+}
+
+.register { grid-area: 1 / 5 / 2 / 6; 
+display: flex;
+align-items: center;
+background-color: rgb(44, 70, 44);
+}.register button {
+margin-left: 125px;
+width: 140px;
+height: 40px;
+transition: 0.4s;
+border: none;
+}.register button:hover {
+background-color: rgb(255, 38, 38);
+}
+
+.summary { grid-area: 2 / 5 / 6 / 6; 
+background-color: rgb(140, 222, 140);
+}
+.main { grid-area: 2 / 2 / 6 / 5; 
+background-color: rgb(92, 146, 92);
+}
+.misc { grid-area: 2 / 1 / 6 / 2;
+background-color: rgb(140, 222, 140);
+}
+.nav { grid-area: 4 / 2 / 5 / 5;
+background-color: rgb(140, 222, 140);
+}
+
+@font-face {
+    font-family: 'rerossquadratic';
+    src: url(font/reross_quadratic-webfont.woff2) format('woff'),
+         url(font/reross_quadratic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
