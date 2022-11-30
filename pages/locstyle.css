@@ -11,7 +11,8 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #fffbec 20%, #ffb387 100%);
+    background: rgb(255,241,195);
+    background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
     background-attachment: fixed;
 }
 
@@ -21,7 +22,7 @@ section {
     background-color: white;
     border-radius: 40px;
     margin-top: 50px;
-    padding: 30px;
+    padding: 45px;
 }
 
 section {
@@ -51,7 +52,7 @@ a {
 
 span,i{
     font-size: 20px;
-    color: #ff7648;
+    color: #ff4a79;
 }
 .hq {
     text-align: center;
@@ -67,8 +68,9 @@ span,i{
         margin-top: 50px;
         margin-bottom: 20px;
         margin-right: 35%;
-        margin-left: 35%;
-        padding: 10px;
+        margin-left: 25%;
+        padding: 20px;
+        width: 50%;
     }
     h3 {
         font-size: 18px;
@@ -78,8 +80,10 @@ span,i{
     }
     h1 {
         font-size: 20px;
-        text-align: center;
     }
+
+    
+
 }
 
 

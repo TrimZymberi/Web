@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 * {
     font-family: 'Open Sans';
@@ -11,7 +12,8 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #fffbec 20%, #ffb387 100%);
+    background: rgb(255,241,195);
+    background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
     background-attachment: fixed;
 }
 
@@ -24,7 +26,7 @@ body {
 .home {
     background-color: white;
     border-radius: 40px;
-    color: #ff7648;
+    color: black;
 }
 
 .hb-button {
@@ -44,11 +46,12 @@ body {
 }
 
 .logo {
+    font-family: 'Caveat';
     display: inline-block;
-    font-size: 40px;
+    font-size: 55px;
     margin-top: 5px;
     margin-left: 15px;
-    font-weight: bold;
+    font-weight: 200;
     color: rgba(255, 255, 255, 255);
     font-weight: 600;
     text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
@@ -60,6 +63,7 @@ body {
     text-align: center;
     list-style-type: none;
     column-gap: 10px;
+    transition: 0.5s;
 }
 
 .nav-container li {
@@ -74,8 +78,11 @@ a {
     text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
 }
 
+.nav-container li a {
+    transition: 0.2s;
+}
 .nav-container li a:hover {
-    color: #ff7648;
+    color: black;
     border-radius: 40px;
     background-color: white;
 }
@@ -84,19 +91,70 @@ a {
     display: block;
 }
 
-.text-container {
+.first-container {
     width: 100%;
     text-align: center;
-    margin-top: 300px;
+    margin-top: 5%;
+}
+.first-container img {
+    position: relative;
+    width: 90%;
+    border-radius: 70px;
+    height: auto;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
 }
 
-.text-container h1 {
-    font-size: 50px;
-    letter-spacing: 5px;
+.first-container h1 {
+    position: relative;
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
 }
 
+.second-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+}
 
-@media screen and (min-width: 930px) {
+.second-container img {
+    position: relative;
+    margin-top: 60%;
+    width: 30%;
+    margin-left: 60%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+}
+.second-container h1 {
+    position: relative;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    margin-top: -40%;
+    margin-left: -75%;
+}
+.second-container p {
+    font-size: 24px;
+    text-align: start;
+    margin-left: 4%;
+    margin-top: 1%;
+    width: 60%;
+}
+
+.fa-bars {
+    color: white;
+    text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+    
+}.fa-bars:active {
+    opacity: 80%;
+}
+
+@media screen and (min-width: 1020px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -104,10 +162,6 @@ a {
         height: 70px;
         row-gap: 15px;
         align-items: center;
-    }
-
-    .logo {
-        margin-top: 0;
     }
 
     .hb-button {
@@ -118,14 +172,35 @@ a {
     .nav-container {
         display: flex;
         margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
     }
 
     .nav-container li {
         margin: 0;
     }
-    
+
+    .first-container h1 {
+        position: relative;
+        color: white;
+        margin-top: -30%;
+        margin-left: 2%;
+        width: 30%;
+        height: 50px;
+        text-align: end;
+        font-size: 50px;
+        font-weight: 600;
+        text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+    }
+    .first-container img {
+        position: relative;
+        width: 60%;
+        margin-left: 30%;
+        border-radius: 70px;
+        height: auto;
+        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+    }
 }
+
+
+
 
 
