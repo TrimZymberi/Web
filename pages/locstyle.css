@@ -20,13 +20,13 @@ section {
     flex-flow: column;
     background-color: white;
     border-radius: 40px;
-    margin: 200px;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 30px;
 }
 
 section {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 450px;
+    margin-right: 450px;
 }
 
 h1 {
@@ -61,12 +61,24 @@ span,i{
 }
 
 
-@media screen and (min-width: 100px) {
+@media screen and (max-width: 1200px) {
     section {
-        margin-top: 20px;
+        
+        margin-top: 50px;
         margin-bottom: 20px;
-        margin-right: 20%;
-        margin-left: 20%;
+        margin-right: 35%;
+        margin-left: 35%;
+        padding: 10px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    a {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
     }
 }
 
