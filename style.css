@@ -21,6 +21,7 @@ body {
     font-size: 18px;
     background-color: transparent;
     padding-bottom: 10px;
+    text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
 }
 
 .home {
@@ -75,7 +76,6 @@ a {
     font-size: 20px;
     color: white;
     padding: 5px 20px;
-    text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
 }
 
 .nav-container li a {
@@ -110,7 +110,7 @@ a {
     margin-top: 5%;
     width: 100%;
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 600;
     text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
 }
@@ -124,26 +124,25 @@ a {
 .second-container img {
     position: relative;
     margin-top: 60%;
-    width: 30%;
-    margin-left: 60%;
+    width: 70%;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
 }
 .second-container h1 {
     position: relative;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 800;
     color: white;
-    margin-top: -40%;
-    margin-left: -75%;
+    text-align: center;
+    margin-top: 1%;
+    text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
 }
 .second-container p {
-    font-size: 24px;
-    text-align: start;
-    margin-left: 4%;
-    margin-top: 1%;
-    width: 60%;
+    font-size: 16px;
+    text-align: center;
+    margin: 1%;
+    
 }
 
 .fa-bars {
@@ -152,6 +151,41 @@ a {
     
 }.fa-bars:active {
     opacity: 80%;
+}
+
+.references {
+    position: relative;
+    top: 95px;
+}
+.references p {
+    font-weight: 200;
+    text-align: center;
+}
+
+.summary {
+    position: relative;
+    top: 100px;
+    border-radius: 2px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    
+}
+.summary a{
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    opacity: 70%;
+    
+}.summary a:hover {
+    opacity: 100%;
+}
+
+.summary th {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+
 }
 
 @media screen and (min-width: 1020px) {
@@ -198,6 +232,72 @@ a {
         height: auto;
         box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
     }
+
+    .second-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    .second-container img {
+        position: relative;
+        margin-top: 60%;
+        width: 30%;
+        margin-left: 60%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+    }
+    .second-container h1 {
+        position: relative;
+        font-size: 45px;
+        font-weight: 800;
+        color: white;
+        text-align: start;
+        margin-top: -40%;
+        margin-left: 1%;
+    }
+    .second-container p {
+        font-size: 18px;
+        text-align: start;
+        margin: 1%;
+        width: 63%;
+    }
+
+    .summary {
+        position: relative;
+        top: 300px;
+        border-radius: 2px;
+        width: 100%;
+        background-color: white;
+        
+    }
+    
+    .references {
+        position: relative;
+        top: 290px;
+    }
+    .references p {
+        font-weight: 200;
+        text-align: center;
+    }    
+
+    .summary a{
+        text-align: center;
+        color: black;
+        font-size: 12px;
+        opacity: 70%;
+    }.summary a:hover {
+        opacity: 100%;
+    }
+    
+    .summary th {
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px;
+    
+    }
+
 }
 
 
