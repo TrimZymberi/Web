@@ -169,10 +169,9 @@ a {
     width: 100%;
     background-color: white;
     padding: 20px;
-    
+    text-align: center;
 }
 .summary a{
-    text-align: center;
     color: black;
     font-size: 12px;
     opacity: 70%;
@@ -264,14 +263,6 @@ a {
         width: 63%;
     }
 
-    .summary {
-        position: relative;
-        top: 300px;
-        border-radius: 2px;
-        width: 100%;
-        background-color: white;
-        
-    }
     
     .references {
         position: relative;
@@ -282,6 +273,14 @@ a {
         text-align: center;
     }    
 
+    .summary {
+        position: relative;
+        top: 300px;
+        border-radius: 2px;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+    }
     .summary a{
         text-align: center;
         color: black;
