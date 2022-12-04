@@ -156,19 +156,9 @@ a {
     opacity: 80%;
 }
 
-.references {
-    position: relative;
-    top: 95px;
-}
-.references p {
-    font-weight: 200;
-    text-align: center;
-}
-
 .summary {
     position: relative;
     top: 50px;
-    align-items: center;
     border-radius: 2px;
     width: 100%;
     background-color: white;
@@ -183,7 +173,7 @@ a {
 }
 .summary a{
     color: black;
-    font-size: 10px;
+    font-size: 9px;
     opacity: 70%;
     
 }.summary a:hover {
@@ -193,7 +183,7 @@ a {
 .summary th {
     text-align: center;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
 
 }
 
