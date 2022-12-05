@@ -48,16 +48,13 @@ body {
 
 .logo {
     font-family: 'Caveat';
-    display: inline-block;
     font-size: 55px;
     margin-top: 5px;
     margin-left: 15px;
     font-weight: 200;
     color: rgba(255, 255, 255, 255);
     font-weight: 600;
-    text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
     transition: 5ms;
-    cursor: default;
 }.logo:active {
     font-size: 58px;
 }
