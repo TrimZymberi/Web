@@ -52,7 +52,7 @@ body {
     margin-top: 5px;
     margin-left: 15px;
     font-weight: 200;
-    color: rgba(255, 255, 255, 255);
+    color: white;
     font-weight: 600;
     transition: 5ms;
 }.logo:active {
@@ -103,7 +103,6 @@ a {
     height: auto;
     box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
 }
-
 .first-container h1 {
     position: relative;
     color: white;
@@ -120,7 +119,6 @@ a {
     text-align: center;
     margin-top: 2%;
 }
-
 .second-container img {
     position: relative;
     margin-top: 60%;
@@ -176,7 +174,6 @@ a {
 }.summary a:hover {
     opacity: 100%;
 }
-
 .summary th {
     text-align: center;
     font-weight: 400;
