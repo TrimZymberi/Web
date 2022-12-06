@@ -11,3 +11,11 @@
     ]
   }
 }
+
+
+
+body {
+  background: rgb(255,241,195);
+  background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
+  background-attachment: fixed;
+}
