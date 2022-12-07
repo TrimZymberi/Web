@@ -16,4 +16,8 @@ function login() {
 		}
 		else {
             alert('Llogaria juaj u hap me sukses');
-	    }
+	    
+		console.log("prsh");
+		}
+	}
+	console.log("prsh");
