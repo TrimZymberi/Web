@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="complete">
-        <form id="survey-form" onsubmit="return login()">
+        <div id="survey-form">
         <div class="form-group">
        
             <h1 id="header-h1" for="form-group" class="headline">Krijimi i nje llogarie Biznesi</h1>
@@ -41,14 +41,14 @@
 
         <div class="form-group">
             <label id="password-label" > Password </label>
-                <input type="password" name="passwordi" id="password" class="form-control" placeholder="Must be at least 8 characters" required="">
+                <input type="password" name="password" id="passwordi" class="form-control" placeholder="Must be at least 8 characters" required="">
         </div>
 
         <div id="submit">
             <button type="submit"  class="submit-button" onclick="login()">Submit</button>
         </div>
         
-        </form>
+        </div>
     </div>
 
     <script src="Biznesi.js"></script>

@@ -1,38 +1,40 @@
-function login() {
-
+function login(){	
 	var companyName = document.getElementById('company-name').value;
 	var hqName = document.getElementById('hq-name').value;
 	var nib = document.getElementById('NIB').value;
 	var nfb = document.getElementById('NFB').value;
 	var email = document.getElementById('emaili').value;
 	var password = document.getElementById('passwordi').value;
+	var eFilter = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
   	
-	if (companyName === '') {
-	  alert('Please enter a valid company name.');
-	  return false;
-	}
-	if (hqName === '') {
-	  alert('Please enter a valid headquarters name.');
-	  return false;
-	}
-	if (nib === '') {
-	  alert('Please enter a valid NIB.');
-	  return false;
-	}
-	if (nfb === '') {
-	  alert('Please enter a valid NFB.');
-	  return false;
-	}
-	if (email === '') {
-	  alert('Please enter a valid email address.');
-	  return false;
-	}
-	if (password === '' || password.length < 8) {
-	  alert('Please enter a valid password with at least 8 characters.');
-	  return false;
-	}
-  
 
-	return true;
+	
+	if (companyName == '') {
+	  alert('Ju lutem shkruani emrin e kompanis tuaj.');
+	  
+	}
+	else if (hqName == '') {
+	  alert('Ju lutem shkruani emrin e lokacionit tuaj');
+	  
+	}
+	else if (nib == '') {
+	  alert('Ju lutem shkruani numrin e biznesit tuaj.');
+	  
+	}
+	else if (nfb == '') {
+	  alert('Ju lutem shkruani numrin fiskal te biznesit.');
+	  
+	}
+	else if(email == '') {
+		alert('Ju lutem shkruani emailin tuaj.');
+	
+	}
+	else if (password == '' || password.length < 8) {
+	  alert('Please enter a valid password with at least 8 characters.');
+	
+	}else{
+		alert('LLogaria juaj u hap me sukses');
+	}
+	
   }
   
