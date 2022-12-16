@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 * {
     font-family: 'Open Sans';
@@ -76,4 +77,271 @@ body {
   color: white;
   background-color: #000000;
   font-weight: 600;
+}
+
+.navbar {
+  font-size: 18px;
+  background-color: transparent;
+  padding-bottom: 10px;
+  text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+}
+
+.home {
+  background-color: white;
+  border-radius: 40px;
+  color: black;
+}
+
+.hb-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  font-size: 25px;
+  border-style: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+}.hb-button:active {
+  color: white;
+}
+
+.logo {
+  font-family: 'Caveat';
+  font-size: 55px;
+  margin-top: 5px;
+  margin-left: 15px;
+  font-weight: 200;
+  color: white;
+  font-weight: 600;
+  transition: 5ms;
+}.logo:active {
+  font-size: 58px;
+}
+
+.nav-container {
+  display: none;
+  text-align: center;
+  list-style-type: none;
+  column-gap: 10px;
+  transition: 0.5s;
+}
+
+.nav-container li {
+  text-align: center;
+  margin: 15px auto;
+} 
+
+a {
+  font-size: 20px;
+  color: white;
+  padding: 5px 20px;
+}
+
+.nav-container li a {
+  transition: 0.2s;
+}
+.nav-container li a:hover {
+  color: black;
+  border-radius: 40px;
+  background-color: white;
+}
+
+.active {
+  display: block;
+}
+
+.first-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+.first-container img {
+  position: relative;
+  width: 90%;
+  border-radius: 70px;
+  height: auto;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+}
+.first-container h1 {
+  position: relative;
+  color: white;
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+}
+
+.second-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+}
+.second-container img {
+  position: relative;
+  margin-top: 60%;
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+}
+.second-container h1 {
+  position: relative;
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-top: 1%;
+  text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+}
+.second-container p {
+  font-size: 16px;
+  text-align: center;
+  margin: 1%;
+  
+}
+
+.fa-bars {
+  color: white;
+  text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+  
+}.fa-bars:active {
+  opacity: 80%;
+}
+
+.summary {
+  position: relative;
+  top: 50px;
+  border-radius: 2px;
+  width: 100%;
+  background-color: white;
+  padding: 11.5px;
+  text-align: center;
+}
+.summary table {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.summary a{
+  color: black;
+  font-size: 9px;
+  opacity: 70%;
+  
+}.summary a:hover {
+  opacity: 100%;
+}
+.summary th {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+@media screen and (min-width: 1020px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      row-gap: 15px;
+      align-items: center;
+  }
+
+  .hb-button {
+      display: none;
+  }
+
+
+  .nav-container {
+      display: flex;
+      margin-right: 30px;
+  }
+
+  .nav-container li {
+      margin: 0;
+  }
+
+  .first-container h1 {
+      position: relative;
+      color: white;
+      margin-top: -30%;
+      margin-left: 2%;
+      width: 30%;
+      height: 50px;
+      text-align: end;
+      font-size: 50px;
+      font-weight: 600;
+      text-shadow: 0 3px 15px rgb(0 0 0 / 0.3);
+  }
+  .first-container img {
+      position: relative;
+      width: 60%;
+      margin-left: 30%;
+      border-radius: 70px;
+      height: auto;
+      box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+  }
+
+  .second-container {
+      width: 100%;
+      text-align: center;
+      margin-top: 2%;
+  }
+  
+  .second-container img {
+      position: relative;
+      margin-top: 60%;
+      width: 30%;
+      margin-left: 60%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+  }
+  .second-container h1 {
+      position: relative;
+      font-size: 45px;
+      font-weight: 800;
+      color: white;
+      text-align: start;
+      margin-top: -40%;
+      margin-left: 1%;
+  }
+  .second-container p {
+      font-size: 18px;
+      text-align: start;
+      margin: 1%;
+      width: 63%;
+  }
+
+  .summary {
+      position: relative;
+      top: 100px;
+      border-radius: 2px;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      padding: 20px;
+  }
+  .summary a{
+      text-align: center;
+      color: black;
+      font-size: 12px;
+      opacity: 70%;
+  }.summary a:hover {
+      opacity: 100%;
+  }
+  
+  .summary th {
+      text-align: center;
+      font-weight: 400;
+      font-size: 24px;
+  
+  }
+
 }
