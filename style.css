@@ -30,7 +30,7 @@ body {
     color: black;
 }
 
-.hb-button {
+.nav-button {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -42,7 +42,7 @@ body {
     padding: 5px 8px;
     border-radius: 5px;
     text-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
-}.hb-button:active {
+}.nav-button:active {
     color: white;
 }
 
@@ -214,7 +214,7 @@ a {
         align-items: center;
     }
 
-    .hb-button {
+    .nav-button {
         display: none;
     }
 
