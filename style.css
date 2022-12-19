@@ -116,8 +116,8 @@ a {
 
 #main-second-container {
     background-color: white;
-    margin: 6%;
-    padding: 20px;
+    margin: 10%;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
 }
@@ -127,8 +127,7 @@ a {
     margin-right: -8%;
     margin-bottom: 3%;
     padding: 10px;
-    background-color: #cccccc;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 0.4)
+    background-color: transparent;
 }
 #second-container img {
     width: 100%;
@@ -258,12 +257,10 @@ a {
     }
     #second-container {
         position: relative;
-        margin-left: -4%;
-        margin-right: -4%;
+        margin-left: -6%;
+        margin-right: -6%;
         margin-bottom: 3%;
-        padding: 10px;
-        background-color: #cccccc;
-        box-shadow: 0 2px 15px rgb(0 0 0 / 0.4)
+        padding: 5px;
     }
     #second-container img {
         width: 100%;
