@@ -16,6 +16,25 @@ body {
     background-attachment: fixed;
 }
 
+.homeback {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin-left: 1%;
+    margin-top: -4.5%;
+    margin-bottom: 0;
+  }
+  .fa-home {
+    font-size: 25px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 30px;
+    opacity: 95%;
+  }.fa-home:hover {
+   opacity: 100%; 
+  }
+
 section {
     display: flex;
     flex-flow: column;
@@ -42,11 +61,11 @@ h3 {
 }
 
 
-a {
+.hq-box a {
     text-align: start;
     cursor: pointer;
     opacity: 80%;
-}a:hover {
+}.hq-box a:hover {
     opacity: 100%;
 }
 
@@ -60,6 +79,7 @@ span,i{
     flex-direction: column;
     flex-wrap: wrap;
 }
+
 
 
 @media screen and (max-width: 1200px) {

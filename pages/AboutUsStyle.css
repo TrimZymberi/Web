@@ -17,6 +17,24 @@ body {
     background-attachment: fixed;
 }
 
+.homeback {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin: 1%;
+}
+.fa-home {
+    font-size: 25px;
+    color: #ff4a79;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    opacity: 95%;
+}.fa-home:hover {
+    opacity: 100%; 
+}
+
 #first-container {
     width: 80%;
     height: auto;

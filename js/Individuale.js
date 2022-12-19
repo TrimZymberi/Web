@@ -5,7 +5,7 @@ function login(){
 	var nfb = document.getElementById('NFB').value;
 	var email = document.getElementById('emaili').value;
 	var password = document.getElementById('passwordi').value;
-	var eFilter = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+	var emailFilter = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   	
 
 	
@@ -23,11 +23,9 @@ function login(){
 	}
 	else if (nfb == '') {
 	  alert('Ju lutem shkruani numrin fiskal te biznesit.');
-	  
 	}
-	else if(email == '') {
-		alert('Ju lutem shkruani emailin tuaj.');
-	
+	else if(!emailFilter.test(email)) {
+		alert('Ju lutem shkruani emailin shembull filani@example.com');
 	}
 	else if (password == '' || password.length < 8) {
 	  alert('Please enter a valid password with at least 8 characters.');
@@ -36,17 +34,10 @@ function login(){
 		alert('LLogaria juaj u hap me sukses');
 	}
 
-	let mainNav= document.getElementById("nav");
-	let navBarToggle = document.getElementById("hb-btn");
-
 	navBarToggle.addEventListener("click", function() {
 
     mainNav.classList.toggle("active");
 
 	});
-
-
-
-	
   }
   
