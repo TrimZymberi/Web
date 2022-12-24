@@ -1,39 +1,35 @@
 function login(){	
 	var companyName = document.getElementById('company-name').value;
-	var hqName = document.getElementById('hq-name').value;
-	var nib = document.getElementById('NIB').value;
-	var nfb = document.getElementById('NFB').value;
+	var BUN = document.getElementById('BUN').value;
+	var BFN = document.getElementById('BFN').value;
 	var email = document.getElementById('emaili').value;
 	var password = document.getElementById('passwordi').value;
-	var emailFilter = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-  	
-	if (companyName == '') {
-	  alert('Ju lutem shkruani emrin e kompanis tuaj.');
+
+	var emailFilter = /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/;
+	var companyNameFilter = /^[A-Z][a-z]( [A-Z][a-z])*$/;
+	var BUNFilter = /^[0-9]{8}$/;
+	var BFNFilter = /^[0-9]{9}$/;
+
+	if (!companyNameFilter.test(companyName)) {
+		alert('Write your Company name,such example Kartell Corp');
 	}
-	else if (hqName == '') {
-	  alert('Ju lutem shkruani emrin e lokacionit tuaj');
+	else if (!BUNFilter.test(BUN)) {
+		alert('Ju lutem shkruani numrin unik te biznesit tuaj.');
 	}
-	else if (nib == '') {
-	  alert('Ju lutem shkruani numrin e biznesit tuaj.');
-	}
-	else if (nfb == '') {
-	  alert('Ju lutem shkruani numrin fiskal te biznesit.');
+	else if (!BFNFilter.test(BFN)) {
+		alert('Ju lutem shkruani numrin fiskal te biznesit.');
 	}
 	else if (!emailFilter.test(email)) {
-	  alert('Ju lutem shkruani emailin shembull filani@example.com');
+		alert('Ju lutem shkruani emailin shembull filani@example.com');
 	}
 	else if (password == '' || password.length < 8) {
-	  alert('Please enter a valid password with at least 8 characters.');
-	
+		alert('Please enter a valid password with at least 8 characters.');
 	}else{
-	  alert('LLogaria juaj u hap me sukses');
+		alert('Account successfully opened');
 	}
 
-	navBarToggle.addEventListener("click", function() {
-
-    mainNav.classList.toggle("active");
+	validationLOGIN.addEventListener("click", function() {
 
 	});
 	
-  }
-  
+}

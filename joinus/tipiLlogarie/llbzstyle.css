@@ -98,3 +98,21 @@ body {
   cursor: pointer;
 }
 
+#countries{
+  margin-left: 1%;
+  margin-right: 3%;
+  margin-top: -1%;
+  margin-bottom: -1%;
+  color: gray;
+}
+
+.form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 80px;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 234, 234);
+}

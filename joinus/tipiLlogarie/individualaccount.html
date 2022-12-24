@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="llidvstyle.css">
     <link rel="icon" type="image/x-icon" href="/images/myK.png">
+    <link rel="stylesheet" href="llidvstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -15,17 +15,17 @@
     </div>
     
     <div class="complete">
-        <form id="survey-form">
+        <div id="survey-form">
+            <h1 id="header-h1" for="form-group" class="headline">Creating an Individual Account</h1>
+            
         <div class="form-group">
-       
-            <h1 id="header-h1" for="form-group" class="headline">Krijimi i nje llogarie Individuale</h1>
-
-            <label id="name-label" for="name">Emri </label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Ketu vendos emrin tuaj">
+            <label id="name-label" for="name">First Name</label>
+            <input type="text" name="name" id="first-name" class="form-control" placeholder="Write your first name.">
         </div>
+
         <div class="form-group">
-            <label id="last-name-label" for="last-name">Mbiemri </label>
-            <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Ketu vendos mbiemrin tuaj">
+            <label id="last-name-label" for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Write your last name.">
         </div>
 
         <div class="form-group">
@@ -39,18 +39,16 @@
         </div>
 
         <div class="form-group">
-            <label id="number-label" for="number">Mosha</label>
-            <input type="number" name="mosha" id="number" min="18" max="99" class="form-control" placeholder="Mosha juaj">
+            <label id="number-label" for="age">Age</label>
+            <input type="date" name="age" id="age" class="form-control">
         </div>
 
-            <div id="submit">
-            <button type="submit"  class="submit-button">
-                Submit
-            </button>
-            </div>
-        
-            </form>
+        <div id="submit">
+        <button type="submit" class="submit-button" onclick="return login()">Submit</button>
         </div>
+
+        </div>
+    </div>
     
         <script src="/js/Individuale.js"></script>
     </body>
