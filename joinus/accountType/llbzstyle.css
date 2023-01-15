@@ -43,7 +43,7 @@ body {
   height: auto;
 }
 
-#survey-form {
+#account-form {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -80,9 +80,6 @@ body {
   font-size: 15px;
   padding: 10px;
 }
-.form-group label {
-  margin-bottom: 5%;
-}
 
 .form-group button,.submit-button {
   position: relative;
@@ -91,7 +88,7 @@ body {
   width: 160%;
   height: 40%;
   margin-left: -40%;
-  margin-top: 20%;
+  margin-top: -5%;
   padding: 15px;
   border-radius: 40px;
   border: none;
@@ -118,4 +115,24 @@ body {
   border: none;
   outline: none;
   background-color: rgb(236, 234, 234);
+}
+
+#option-label {
+  margin-bottom: 2%;
+}
+
+#reference-label {
+  color: black;
+  opacity: 80%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 200;
+}#reference-label:hover {
+  opacity: 100%;
+}
+.ref {
+    margin-bottom: 5%;
+    margin-top: -1%;
+
 }

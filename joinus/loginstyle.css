@@ -44,17 +44,6 @@ body {
   height: auto;
 }
 
-.form-control {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 1%;
-  padding: 10px;
-  border-radius: 80px;
-  border: none;
-  outline: none;
-  background-color: rgb(236, 234, 234);
-}
-
 #account-form {
   display: flex;
   position: absolute;
@@ -67,6 +56,17 @@ body {
   border-radius: 40px;
   padding: 20px;
   margin-top: 2%;
+}
+
+.form-control {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 234, 234);
 }
 
 .headline {
