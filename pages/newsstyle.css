@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+
+* {
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(255,241,195);
+    background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
+    background-attachment: fixed;
+}
+
+.homeback {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin: 1%;
+    z-index: 999;
+}
+.fa-home {
+    font-size: 25px;
+    color: #ff4a79;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    opacity: 95%;
+}.fa-home:hover {
+    opacity: 100%; 
+}
+
+#container {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1rem;
+}
+.header{
+    font-size: 1.5rem;
+    margin: 1%;
+    text-align: center;
+}
+
+#news-containers {
+    display: flex;
+    flex: 2 1 auto;
+    background-color: white;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.news {
+    display: block;
+    text-align: center;
+    background-color: black;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+}
+.news img{
+    width: 100%;
+    height: auto;
+}
+.news h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 400;
+}
+.news p{
+    font-weight: 200;
+    color: white;
+}
