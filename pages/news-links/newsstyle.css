@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(255,241,195);
+    background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
+    background-attachment: fixed;
+}
+
+.homeback {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin: 1%;
+    z-index: 999;
+}
+.fa-home {
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 30px;
+    opacity: 70%;
+    transition: 0.2s;
+}.fa-home:hover {
+    opacity: 100%; 
+}
+#container {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+.header {
+    margin: 5%;
+}
+.header h1 {
+    text-align: center;
+    margin: 1%;
+    font-size: 4rem;
+    font-weight: 200;
+    color: black;
+}
+.header img {
+    width: 100%;
+    height: auto;
+}
+.header p {
+    font-size: 1.1em;
+    margin: 2%;
+    font-weight: 200;
+}
+.header hr {
+    margin: 2%;
+    border: 1px solid;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+}
+#first-container {
+    display: flex;
+}
+.whois-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+  
+  .whois-section.active {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .order {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+.whois-section img {
+    position: relative;
+    width: 100%;
+}
+
+.order button {
+    top: 5em;
+    position: relative;
+    width: 40%;
+    flex-direction: row;
+    background-color: transparent;
+    font-size: 32px;
+    z-index: 999;
+    border: none;
+}.order button:hover {
+    cursor: pointer;
+}.order button:active {
+    border: 2px dotted black;
+}
+@media screen and (max-width: 1510px) {
+    #container {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 1rem;
+        padding-bottom: 5rem;
+    }
+    .header {
+        margin: 5%;
+    }
+    .header h1 {
+        text-align: center;
+        margin: 1%;
+        font-size: 4rem;
+        font-weight: 200;
+        color: black;
+    }
+    .header img {
+        width: 100%;
+        height: auto;
+    }
+    .header p {
+        font-size: 1.1em;
+        margin: 2%;
+        font-weight: 200;
+    }
+    .header hr {
+        margin: 2%;
+        border: 1px solid;
+    }
+    
+    .order {
+        display: flexbox;
+        flex-direction: column;
+    }
+    #first-container {
+        display: flex;
+    }
+    .whois-section {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+      
+      .whois-section.active {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .order {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      
+    .whois-section img {
+        position: relative;
+        width: 100%;
+    }
+    
+    .order button {
+        top: 5em;
+        position: relative;
+        width: 40%;
+        flex-direction: column;
+        background-color: transparent;
+        font-size: 32px;
+        z-index: 999;
+        border: none;
+    }.order button:hover {
+        cursor: pointer;
+    }.order button:active {
+        border: 2px dotted black;
+    }
+}
