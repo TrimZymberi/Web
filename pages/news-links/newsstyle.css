@@ -62,6 +62,7 @@ body {
     height: auto;
 }
 .header p {
+    text-align: center;
     font-size: 1.1em;
     margin: 2%;
     font-weight: 200;
@@ -78,51 +79,27 @@ body {
 #first-container {
     display: flex;
 }
-.whois-section {
+.news-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 1rem;
 }
   
-  .whois-section.active {
+.news-section {
     display: flex;
     flex-direction: row;
-  }
-  
-  .order {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  button {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-.whois-section img {
-    position: relative;
+}
+.news-section img {
     width: 100%;
+    transition: all 0.2s;
+}.news-section img:hover {
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+    cursor: pointer;
 }
 
-.order button {
-    top: 5em;
-    position: relative;
-    width: 40%;
-    flex-direction: row;
-    background-color: transparent;
-    font-size: 32px;
-    z-index: 999;
-    border: none;
-}.order button:hover {
-    cursor: pointer;
-}.order button:active {
-    border: 2px dotted black;
-}
-@media screen and (max-width: 1510px) {
+
+@media screen and (max-width: 1200px) {
     #container {
         background-color: white;
         width: 100%;
@@ -139,8 +116,8 @@ body {
     }
     .header h1 {
         text-align: center;
-        margin: 1%;
-        font-size: 4rem;
+        margin: 3%;
+        font-size: 2rem;
         font-weight: 200;
         color: black;
     }
@@ -149,63 +126,43 @@ body {
         height: auto;
     }
     .header p {
-        font-size: 1.1em;
-        margin: 2%;
+        text-align: center;
+        font-size: 0.9em;
+        margin: 4%;
         font-weight: 200;
     }
     .header hr {
         margin: 2%;
         border: 1px solid;
     }
-    
-    .order {
-        display: flexbox;
-        flex-direction: column;
-    }
+
     #first-container {
         display: flex;
+        flex-direction: column;
     }
-    .whois-section {
+    .news-section {
         display: flex;
         flex-direction: column;
         margin: 1rem;
     }
       
-      .whois-section.active {
+    .news-section.active {
         display: flex;
         flex-direction: column;
-      }
-      
-      .order {
+    }
+
+    .news-section img {
         display: flex;
-        justify-content: space-between;
-        padding: 20px;
-      }
-      
-      button {
-        background-color: transparent;
-        border: none;
-        font-size: 30px;
-        cursor: pointer;
-      }
-      
-    .whois-section img {
         position: relative;
+        top: 2rem;
+        flex-direction: column;
         width: 100%;
+        margin: 0 auto;
+        margin-top: 5%;
+        transition: all 0.2s;
+    }.news-section img:hover {
+        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+        cursor: pointer;
     }
     
-    .order button {
-        top: 5em;
-        position: relative;
-        width: 40%;
-        flex-direction: column;
-        background-color: transparent;
-        font-size: 32px;
-        z-index: 999;
-        border: none;
-    }.order button:hover {
-        cursor: pointer;
-    }.order button:active {
-        border: 2px dotted black;
-    }
 }
