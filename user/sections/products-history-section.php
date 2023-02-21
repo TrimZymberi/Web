@@ -17,66 +17,55 @@ session_start();
 <body>
 
     <?php
-    if (isset($_SESSION["userid"])) {
-        if ($_SESSION['usrtype'] == "admin") { ?>
+    if
+    (isset($_SESSION["userid"])) {
+        if
+        ($_SESSION['usrtype'] == "admin") { ?>
             <div class="homeback">
                 <a href="../../Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
             </div>
             <ul class="users-list">
-                <div class="main-c-flex">
-                    <h1>Users List</h1>
-                    <a href="user-add-section.php" class="create-button">CREATE NEW USER</a>
-                </div>
+                <h1>News History</h1>
             </ul>
 
             <?php
             try {
+
                 $username = "root";
                 $password = "";
                 $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
 
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                $stmt = $pdo->prepare("SELECT * FROM users");
+                $stmt = $pdo->prepare("SELECT p.product_id, p.products_header, p.created_date, u.user_username FROM products p INNER JOIN users u ON p.user_id = u.user_id");
                 $stmt->execute();
 
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $user_id = $row['user_id'];
-                    $user_username = $row['user_username'];
-                    $email = $row['user_email'];
+                    $admin_name = $row['user_username'];
+                    $header = $row['products_header'];
                     $createdDate = $row['created_date'];
-                    $usertype = $row['usertype'];
-            ?>
+                    ?>
+
+
                     <ul class="users-list">
-                        <h2><span>User:</span>
-                            <?php echo $user_username; ?>
+                        <h2><span>Created By:</span>
+                            <?php echo $admin_name; ?>
                         </h2>
-                        <p><span>Email:</span>
-                            <?php echo $email; ?>
+                        <p><span>News:</span>
+                            <?php echo $header; ?>
                         </p>
-                        <p><span>User joined since:</span>
+                        <p><span>Last Created/Modified:</span>
                             <?php echo $createdDate; ?>
                         </p>
-                        <p><span>User Type:</span>
-                            <?php echo $usertype; ?>
-                        </p>
-                        <div class="icon-container">
-                            <form action="../../auth/user-delete.php" method="post">
-                                <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                                <button type="submit" name="submit" class="delete-button">
-                                    <i class="fa fa-ban" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                            <a href="user-edit-section.php?id=<?php echo $user_id; ?>" class="edit-button">EDIT</a>
-                        </div>
                     </ul>
 
-    <?php
+                    <?php
                 }
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
             $pdo = null;
+
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

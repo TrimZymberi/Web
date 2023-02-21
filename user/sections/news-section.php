@@ -44,7 +44,7 @@ session_start();
                                 News Edit Section
                             </a></label>
 
-                        <label for="news"><a href="news-history.php">
+                        <label for="news"><a href="news-history-section.php">
                                 News History Section
                             </a></label>
 

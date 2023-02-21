@@ -19,7 +19,7 @@ session_start();
     <?php
     if (isset($_SESSION["userid"])) {
         if ($_SESSION['usrtype'] == "admin") {
-            ?>
+    ?>
 
             <div class="homeback">
                 <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -44,12 +44,16 @@ session_start();
                                 Products Edit Section
                             </a></label>
 
+                        <label for="news"><a href="products-history-section.php">
+                                Products History Section
+                            </a></label>
+
                     </div>
                 </div>
             </div>
 
 
-            <?php
+    <?php
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }
