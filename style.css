@@ -325,6 +325,7 @@ a {
 }
 
 @media screen and (min-width: 320px) {
+
     .summary {
         position: relative;
         top: 100px;
