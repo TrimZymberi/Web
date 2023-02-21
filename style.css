@@ -324,7 +324,34 @@ a {
 
 }
 
+@media screen and (min-width: 320px) {
+    .summary {
+        position: relative;
+        top: 100px;
+        border-radius: 2px;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        margin: 0;
+    }
+    .summary a{
+        text-align: center;
+        color: black;
+        font-size: 12px;
+        opacity: 70%;
+        padding: 0;
+    }.summary a:hover {
+        opacity: 100%;
+    }
 
-
-
-
+    .summary a, .summary th {
+        margin: 0.5rem;
+    }
+    .summary th {
+        padding-bottom: 0.5rem;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+    
+    }
+}

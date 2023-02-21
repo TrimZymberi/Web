@@ -23,6 +23,10 @@ session_start();
         ($_SESSION['usrtype'] == "admin") {
             ?>
 
+            <div class="homeback">
+                <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
+            </div>
+
             <div id="whole-box">
                 <div id="main-container">
                     <div class="side-container">

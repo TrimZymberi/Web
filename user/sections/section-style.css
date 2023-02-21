@@ -22,6 +22,27 @@ body {
   background-attachment: fixed;
 }
 
+.homeback {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  margin: 1%;
+  z-index: 999;
+}
+.fa-home {
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  border-radius: 30px;
+  opacity: 70%;
+  transition: 0.2s;
+}
+.fa-home:hover {
+  opacity: 100%;
+}
+
 #whole-box {
   margin-right: 10rem;
   margin-left: 10rem;
