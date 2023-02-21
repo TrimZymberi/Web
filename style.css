@@ -63,6 +63,7 @@ body {
     display: none;
     text-align: center;
     list-style-type: none;
+    margin-top: 1%;
     column-gap: 10px;
     transition: 0.5s;
 }
