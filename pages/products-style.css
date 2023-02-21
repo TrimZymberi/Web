@@ -68,15 +68,15 @@ button {
   text-align: start;
   text-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
 }
-.search-bar, .search-button {
-  border: 5px solid white;
-  padding: 1rem;
-  outline: none;
-}
 .comment {
   font-weight: 200;
   font-size: 1.2rem;
   text-align: center;
+}
+.search-bar, .search-button {
+  border: 5px solid white;
+  padding: 1rem;
+  outline: none;
 }
 .search-button {
   margin-left: -1rem;
@@ -185,21 +185,17 @@ button {
 
 @media screen and (max-width: 1080px) {
   #container {
-    background-color: white;
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 1rem;
-    padding-bottom: 5rem;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .header,
   .header h1 {
     font-family: "Caveat";
     font-size: 5rem;
-    margin: 1%;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
 
@@ -253,4 +249,21 @@ button {
     height: auto;
     font-weight: 200;
   }
+  .search-bar, .search-button {
+    border: 5px solid white;
+    padding: 1rem;
+    outline: none;
+  }
+  .search-button {
+    margin-right: 0;
+    margin-left: -1rem;
+    background-color: black;
+    opacity: 85%;
+    transition: opacity 0.3s;
+    color: white;
+  }.search-button:hover {
+    cursor: pointer;
+    opacity: 100%;
+  }
+  
 }
