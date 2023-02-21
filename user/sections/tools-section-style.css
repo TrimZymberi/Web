@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+* {
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 241, 195);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 195, 1) 0%,
+    rgba(247, 228, 163, 1) 24%,
+    rgba(255, 74, 121, 1) 90%
+  );
+  background-attachment: fixed;
+}
+
+#whole-box {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 25rem;
+  margin-left: 25rem;
+  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+#main-container {
+  width: 100;
+  height: auto;
+  padding: 2rem;
+}
+
+.side-container {
+  position: relative;
+  padding: 1rem;
+}
+
+.side-container h1 {
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  background-color: black;
+}
+
+.menu-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.form-control {
+  display: flex;
+  vertical-align: middle;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 234, 234);
+}
+
+.submit-button {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border: none;
+  color: white;
+  background-color: #000000;
+  font-weight: 600;
+  opacity: 90%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  opacity: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  font-weight: 400;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 234, 234);
+  box-shadow: 0 1px 7px rgb(0 0 0 / 0.4);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  #whole-box {
+    position: relative;
+    margin-top: 1rem;
+    margin-right: 15rem;
+    margin-left: 15rem;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+  }
+
+  #main-container {
+    width: 100;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .side-container {
+    position: relative;
+    padding: 1rem;
+  }
+
+  .side-container h1 {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: black;
+  }
+
+  .menu-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+  }
+
+  .form-control {
+    display: flex;
+    vertical-align: middle;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 234, 234);
+  }
+
+  .submit-button {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+    margin-top: 10%;
+    color: white;
+    background-color: #000000;
+    font-weight: 600;
+    opacity: 90%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .submit-button:hover {
+    opacity: 100%;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .form-group p {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-group input {
+    font-weight: 400;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 234, 234);
+    box-shadow: 0 1px 7px rgb(0 0 0 / 0.4);
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  #whole-box {
+    position: relative;
+    margin-top: 1rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+  }
+}
