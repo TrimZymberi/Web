@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 241, 195);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 195, 1) 0%,
+    rgba(247, 228, 163, 1) 24%,
+    rgba(255, 74, 121, 1) 90%
+  );
+  background-attachment: fixed;
+  font-family: "Open Sans";
+  color: black;
+}
+
+.homeback {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  margin: 1%;
+  z-index: 999;
+}
+.fa-home {
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  border-radius: 30px;
+  opacity: 70%;
+  transition: 0.2s;
+}
+.fa-home:hover {
+  opacity: 100%;
+}
+
+.users-list h1 {
+  background-color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.users-list {
+  padding: 20px;
+}
+
+span {
+  font-weight: 600;
+}
+
+.users-list {
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.delete-button {
+  outline: none;
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+.edit-button {
+  text-decoration: none;
+  outline: none;
+  background-color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+  color: black;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s;
+}
+.edit-button:hover {
+  background-color: #c2c2c2;
+  cursor: pointer;
+}
+
+.icon-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.fa-ban {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+  color: black;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s;
+}
+.fa-ban:hover {
+  background-color: #c2c2c2;
+  cursor: pointer;
+}
+
+.users-list h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .users-list h2 {
+    font-size: 20px;
+  }
+  .users-list p {
+    font-size: 16px;
+  }
+}
