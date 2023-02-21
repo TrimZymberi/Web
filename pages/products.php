@@ -26,12 +26,13 @@ session_start();
             <h1>Products</h1>
         </div>
 
+        <form method="GET">
+            <input type="text" name="product_name" placeholder="Search for a product" class="search-bar">
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
     <div class="second-container">
-        <form method="GET">
-            <input type="text" name="product_name" placeholder="Search for a product">
-            <button type="submit">Search</button>
-        </form>
+    
         <div id="product-containers">
             <?php
             try {
@@ -55,7 +56,8 @@ session_start();
                 }
 
                 if ($arg->rowCount() == 0) {
-                    echo "<p>No products found.</p>";
+                    $product_name="{$_GET['product_name']}";
+                    echo "<p class='comment'>No products was found named ". $product_name . "</p>";
                 } else {
                     while ($row = $arg->fetch(PDO::FETCH_ASSOC)) {
                         $header = $row['products_header'];
@@ -94,9 +96,6 @@ session_start();
                                         </a>
                                     </div>
                                 </div>
-
-`
-
                                 <?php
                             } else {
                                 ?>
@@ -136,6 +135,8 @@ session_start();
                 echo "Error: " . $e->getMessage();
             }
             $pdo = null;
+            if (isset($_SESSION["userid"])) {
+            
             if ($_SESSION['usrtype'] == "admin") {
                 ?>
                 <div class="product">
@@ -143,6 +144,7 @@ session_start();
                 </div>
                 <?php
             }
+        }
             ?>
 
         </div>

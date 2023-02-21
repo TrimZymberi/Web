@@ -118,12 +118,15 @@ session_start();
             $pdo = null;
             ?>
             <?php
-            if ($_SESSION['usrtype'] == "admin") {
+            if (isset($_SESSION["userid"])) {
+
+                if ($_SESSION['usrtype'] == "admin") {
             ?>
-                <div class="news">
-                    <a href="../user/sections/news-add-section.php"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                </div>
+                    <div class="news">
+                        <a href="../user/sections/news-add-section.php"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
             <?php
+                }
             }
             ?>
         </div>
