@@ -2,7 +2,6 @@
 
 class regControl extends Register
 {
-
     private $username;
     private $email;
     private $password;

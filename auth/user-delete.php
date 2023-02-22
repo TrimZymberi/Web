@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 if(isset($_SESSION["userid"]) && $_SESSION['usrtype'] == "admin") {
         $username = "root";
         $password = "";
