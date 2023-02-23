@@ -17,34 +17,30 @@ session_start();
 <body>
 
     <?php
-    if
-    (isset($_SESSION["userid"])) {
-        if
-        ($_SESSION['usrtype'] == "admin") { ?>
+    if (isset($_SESSION["userid"])) {
+        if ($_SESSION['usrtype'] == "admin") { ?>
             <div class="homeback">
                 <a href="../../Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
             </div>
             <ul class="users-list">
-                <h1>News History</h1>
+                <h1>Products History</h1>
             </ul>
 
             <?php
             try {
 
-                $username = "root";
-                $password = "";
-                $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+                include "../../packages/database-pkg.php";
+                $products = new Database();
+                $pdo = $products->connect();
 
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $products = $pdo->prepare("SELECT p.product_id, p.products_header, p.created_date, u.user_username FROM products p INNER JOIN users u ON p.user_id = u.user_id");
+                $products->execute();
 
-                $stmt = $pdo->prepare("SELECT p.product_id, p.products_header, p.created_date, u.user_username FROM products p INNER JOIN users u ON p.user_id = u.user_id");
-                $stmt->execute();
-
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                while ($row = $products->fetch(PDO::FETCH_ASSOC)) {
                     $admin_name = $row['user_username'];
                     $header = $row['products_header'];
                     $createdDate = $row['created_date'];
-                    ?>
+            ?>
 
 
                     <ul class="users-list">
@@ -59,13 +55,12 @@ session_start();
                         </p>
                     </ul>
 
-                    <?php
+    <?php
                 }
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
             $pdo = null;
-
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

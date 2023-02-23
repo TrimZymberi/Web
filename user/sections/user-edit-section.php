@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$username = "root";
-$password = "";
-$pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+include "../../packages/database-pkg.php";
+$products = new Database();
+$pdo = $products->connect();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-$username = "root";
-$password = "";
-$pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+include "../../packages/database-pkg.php";
+$news = new Database();
+$pdo = $news->connect();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
+
     $news = $pdo->prepare('SELECT * FROM news WHERE news_id = ?');
     $news->execute(array($id));
     $row = $news->fetch(PDO::FETCH_ASSOC);
@@ -33,11 +34,9 @@ if (isset($_GET['id'])) {
 <body>
 
     <?php
-    if
-    (isset($_SESSION["userid"])) {
-        if
-        ($_SESSION['usrtype'] == "admin") {
-            ?>
+    if (isset($_SESSION["userid"])) {
+        if ($_SESSION['usrtype'] == "admin") {
+    ?>
 
             <div class="homeback">
                 <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -55,30 +54,27 @@ if (isset($_GET['id'])) {
                                 <label for="header">
                                     <p>Header</p>
                                 </label>
-                                <input type="text" name="header" class="form-control"
-                                    placeholder="You are modifying news header here!">
+                                <input type="text" name="header" class="form-control" value="<?php echo $row['news_header']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="summary">
                                     <p>Summary</p>
                                 </label>
-                                <input type="text" name="summary" class="form-control"
-                                    placeholder="You are modifying summary here!">
+                                <input type="text" name="summary" class="form-control" value="<?php echo $row['news_summary']; ?>">
                             </div>
 
                             <div class="form-group image">
                                 <label for="image">
                                     <p>Image</p>
                                 </label>
-                                <input type="file" name="image" alt="" accept="image/*" value="You are modifying the Image">
+                                <input type="file" name="image" alt="" accept="image/*" value="<?php echo $row['news_image']; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="link">
                                     <p>Link</p>
                                 </label>
-                                <input type="text" name="link" class="form-control"
-                                    placeholder="You are modifying the link for the chained connection">
+                                <input type="text" name="link" class="form-control" value="<?php echo $row['news_divide']; ?>">
                             </div>
 
                             <div id="submit">
@@ -90,7 +86,7 @@ if (isset($_GET['id'])) {
             </div>
 
 
-            <?php
+    <?php
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

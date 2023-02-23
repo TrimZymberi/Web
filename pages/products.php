@@ -21,12 +21,12 @@ session_start();
         <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
     </div>
 
-    
+
     <div id="container">
         <div class="header">
             <h1>Products</h1>
         </div>
-        
+
         <form method="GET">
             <input type="text" name="product_name" placeholder="Search for a product" class="search-bar">
             <button type="submit" class="search-button">Search</button>
@@ -34,7 +34,7 @@ session_start();
     </div>
     <!-- <div class="container-divider"> </div> -->
     <div class="second-container">
-    
+
         <div id="product-containers">
             <?php
             try {
@@ -58,8 +58,8 @@ session_start();
                 }
 
                 if ($arg->rowCount() == 0) {
-                    $product_name="{$_GET['product_name']}";
-                    echo "<p class='comment'>No products was found named ". $product_name . "</p>";
+                    $product_name = "{$_GET['product_name']}";
+                    echo "<p class='comment'>No products was found named " . $product_name . "</p>";
                 } else {
                     while ($row = $arg->fetch(PDO::FETCH_ASSOC)) {
                         $header = $row['products_header'];
@@ -70,12 +70,12 @@ session_start();
                         if ($searched && stripos($header, $search_term) === false) {
                             continue;
                         }
-                        ?>
+            ?>
 
                         <?php
                         if (isset($_SESSION["userid"])) {
                             if ($_SESSION['usrtype'] == "admin") {
-                                ?>
+                        ?>
                                 <div class="product">
                                     <a href="products-links/<?php echo $link; ?>">
                                         <img src="../images/<?php echo $image; ?>" alt="">
@@ -98,9 +98,9 @@ session_start();
                                         </a>
                                     </div>
                                 </div>
-                                <?php
+                            <?php
                             } else {
-                                ?>
+                            ?>
                                 <div class="product">
                                     <a href="product-links/<?php echo $link; ?>">
                                         <img src="../images/<?php echo $image; ?>" alt="">
@@ -111,8 +111,14 @@ session_start();
                                             <?php echo $price; ?>$
                                         </p>
                                     </a>
+                                    <div class="consumer-button">
+                                        <button>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="addtc-button">Add To Cart</button>
+                                    </div>
                                 </div>
-                                <?php
+                            <?php
                             }
                         } else {
                             ?>
@@ -126,11 +132,19 @@ session_start();
                                         <?php echo $price; ?>$
                                     </p>
                                 </a>
+                                <a href="../joinus/login.php">
+                                    <div class="consumer-button">
+                                        <button>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="addtc-button">Add To Cart</button>
+                                    </div>
+                                </a>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
-                        <?php
+                    <?php
                     }
                 }
             } catch (PDOException $e) {
@@ -138,15 +152,15 @@ session_start();
             }
             $pdo = null;
             if (isset($_SESSION["userid"])) {
-            
-            if ($_SESSION['usrtype'] == "admin") {
-                ?>
-                <div class="product">
-                    <a href="../user/sections/products-add-section.php"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                </div>
-                <?php
+
+                if ($_SESSION['usrtype'] == "admin") {
+                    ?>
+                    <div class="product">
+                        <a href="../user/sections/products-add-section.php"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+            <?php
+                }
             }
-        }
             ?>
 
         </div>

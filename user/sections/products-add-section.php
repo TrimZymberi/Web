@@ -17,11 +17,9 @@ session_start();
 <body>
 
     <?php
-    if
-    (isset($_SESSION["userid"])) {
-        if
-        ($_SESSION['usrtype'] == "admin") {
-            ?>
+    if (isset($_SESSION["userid"])) {
+        if ($_SESSION['usrtype'] == "admin") {
+    ?>
 
             <div class="homeback">
                 <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -38,15 +36,13 @@ session_start();
                                 <label for="header">
                                     <p>Header</p>
                                 </label>
-                                <input type="text" name="header" class="form-control"
-                                    placeholder="Write your Product header here!">
+                                <input type="text" name="header" class="form-control" placeholder="Write your Product header here!">
                             </div>
                             <div class="form-group">
                                 <label for="price">
                                     <p>Price</p>
                                 </label>
-                                <input type="text" name="price" class="form-control"
-                                    placeholder="Write your Product price here!">
+                                <input type="text" name="price" class="form-control" placeholder="Write your Product price here!">
                             </div>
 
                             <div class="form-group image">
@@ -60,8 +56,7 @@ session_start();
                                 <label for="link">
                                     <p>Link</p>
                                 </label>
-                                <input type="text" name="link" class="form-control"
-                                    placeholder="Write your link for the chained connection">
+                                <input type="text" name="link" class="form-control" placeholder="Write your link for the chained connection">
                             </div>
 
                             <div id="submit">
@@ -73,7 +68,7 @@ session_start();
             </div>
 
 
-            <?php
+    <?php
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

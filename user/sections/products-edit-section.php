@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$username = "root";
-$password = "";
-$pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+include "../../packages/database-pkg.php";
+$news = new Database();
+$pdo = $news->connect();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
     <?php
     if (isset($_SESSION["userid"])) {
         if ($_SESSION['usrtype'] == "admin") {
-            ?>
+    ?>
 
             <div class="homeback">
                 <a href="/web/Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -53,31 +53,27 @@ if (isset($_GET['id'])) {
                                 <label for="header">
                                     <p>Header</p>
                                 </label>
-                                <input type="text" name="header" class="form-control"
-                                    value="<?php echo $row['products_header']; ?>">
+                                <input type="text" name="header" class="form-control" value="<?php echo $row['products_header']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="summary">
                                     <p>Price</p>
                                 </label>
-                                <input type="text" name="price" class="form-control"
-                                    value="<?php echo $row['products_price']; ?>">
+                                <input type="text" name="price" class="form-control" value="<?php echo $row['products_price']; ?>">
                             </div>
 
                             <div class="form-group image">
                                 <label for="image">
                                     <p>Image</p>
                                 </label>
-                                <input type="file" name="image" alt="" accept="image/*"
-                                    value="<?php echo $row['products_image']; ?>">
+                                <input type="file" name="image" alt="" accept="image/*" value="<?php echo $row['products_image']; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="link">
                                     <p>Link</p>
                                 </label>
-                                <input type="text" name="link" class="form-control"
-                                    value="<?php echo $row['products_link']; ?>">
+                                <input type="text" name="link" class="form-control" value="<?php echo $row['products_link']; ?>">
                             </div>
 
                             <div id="submit">
@@ -89,7 +85,7 @@ if (isset($_GET['id'])) {
             </div>
 
 
-            <?php
+    <?php
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

@@ -31,9 +31,9 @@ session_start();
 
             <?php
             try {
-                $username = "root";
-                $password = "";
-                $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+                include "../../packages/database-pkg.php";
+                $products = new Database();
+                $pdo = $products->connect();
 
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

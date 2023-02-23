@@ -57,6 +57,32 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.consumer-button {
+  margin: 1.5rem 0rem 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fa-heart {
+  color: #c2c2c2;
+  transform: scale(1.5);
+  transition: transform 0.5s, color 0.2s;
+}.fa-heart:hover {
+  color: red;
+  cursor: pointer;
+  transform: scale(1.7);
+}
+.addtc-button {
+  background-color: black;
+  color: white;
+  opacity: 85%;
+  padding: 1rem;
+  transition: opacity 0.4s;
+}.addtc-button:hover {
+  cursor: pointer;
+  opacity: 100%;
   
 }
 /* .container-divider{
@@ -78,7 +104,8 @@ button {
   font-size: 1.2rem;
   text-align: center;
 }
-.search-bar, .search-button {
+.search-bar,
+.search-button {
   border: 5px solid white;
   padding: 1rem;
   outline: none;
@@ -90,7 +117,8 @@ button {
   opacity: 85%;
   transition: opacity 0.3s;
   color: white;
-}.search-button:hover {
+}
+.search-button:hover {
   cursor: pointer;
   opacity: 100%;
 }
@@ -184,7 +212,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 @media screen and (max-width: 1080px) {
@@ -263,7 +290,8 @@ button {
     height: auto;
     font-weight: 200;
   }
-  .search-bar, .search-button {
+  .search-bar,
+  .search-button {
     border: 5px solid white;
     padding: 1rem;
     outline: none;
@@ -281,9 +309,9 @@ button {
     opacity: 85%;
     transition: opacity 0.3s;
     color: white;
-  }.search-button:hover {
+  }
+  .search-button:hover {
     cursor: pointer;
     opacity: 100%;
   }
-  
 }

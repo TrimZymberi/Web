@@ -1,57 +1,181 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 * {
-    font-family: 'Open Sans';
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    margin: 0;
-    padding: 0;
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: rgb(255,241,195);
-    background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
-    background-attachment: fixed;
+  background: rgb(255, 241, 195);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 195, 1) 0%,
+    rgba(247, 228, 163, 1) 24%,
+    rgba(255, 74, 121, 1) 90%
+  );
+  background-attachment: fixed;
 }
 
 .homeback {
-    position: fixed;
-    width: 100%;
-    height: auto;
-    border-radius: 50px;
-    margin: 1%;
-    z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  margin: 1%;
+  z-index: 999;
 }
 .fa-home {
-    font-size: 25px;
-    color: white;
-    background-color: black;
-    padding: 20px;
-    border-radius: 30px;
-    opacity: 70%;
-    transition: 0.2s;
-}.fa-home:hover {
-    opacity: 100%; 
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  border-radius: 30px;
+  opacity: 70%;
+  transition: 0.2s;
+}
+.fa-home:hover {
+  opacity: 100%;
 }
 
 .delete-button {
-    outline: none;
-    background-color: white;
-    border: none;
-    font-size: 1rem;
+  outline: none;
+  background-color: white;
+  border: none;
+  font-size: 1rem;
 }
 .edit-button {
-    outline: none;
-    background-color: white;
-    border: none;
-    font-size: 1rem;
+  outline: none;
+  background-color: white;
+  border: none;
+  font-size: 1rem;
 }
 #container {
-    background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
 
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+.header,
+.header h1 {
+  font-family: "Caveat";
+  color: black;
+  font-size: 5rem;
+  margin: 1%;
+  text-align: center;
+  text-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+}
+
+#news-containers {
+  display: flex;
+  background-color: rgb(245, 245, 245);
+  padding: 2rem;
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.news {
+  text-align: center;
+  background-color: white;
+  width: 30%;
+  height: auto;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  transition: 0.2s;
+}
+.news:hover {
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+  margin: 1.6rem;
+
+  transform: scale(1.05);
+}
+.news:active {
+  opacity: 90%;
+}
+.news img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+}
+.news h1 {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+.news p {
+  width: 100%;
+  height: auto;
+  font-weight: 200;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-trash {
+  margin: 1rem;
+  color: black;
+  padding: 1.2rem;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.fa-trash:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.fa-plus {
+  padding: 1.2rem;
+  border-radius: 40px;
+  margin: 2rem;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.fa-plus:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.fa-pencil-square-o {
+  padding: 1.1rem;
+  border-radius: 40px;
+  margin: 1rem;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.fa-pencil-square-o:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 1080px) {
+  #container {
+    background-color: white;
     width: 100%;
     height: auto;
     margin-right: 0;
@@ -60,17 +184,16 @@ body {
     margin-bottom: 2%;
     padding: 1rem;
     padding-bottom: 5rem;
-}
-.header, .header h1{
-    font-family: 'Caveat';
-    color: black;
+  }
+  .header,
+  .header h1 {
+    font-family: "Caveat";
     font-size: 5rem;
     margin: 1%;
     text-align: center;
-    text-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
-}
+  }
 
-#news-containers {
+  #news-containers {
     display: flex;
     background-color: rgb(245, 245, 245);
     padding: 2rem;
@@ -80,152 +203,41 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-}
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
+  }
 
-.news {
+  .news {
     text-align: center;
     background-color: white;
-    width: 30%;
+    width: 100%;
     height: auto;
     padding: 1.5rem;
     margin: 1.5rem;
     transition: 0.2s;
-}.news:hover {
+  }
+  .news:hover {
     box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
     margin: 1.6rem;
-    
     transform: scale(1.05);
-    
-}.news:active{
+  }
+  .news:active {
     opacity: 90%;
-}
-.news img{
+  }
+  .news img {
     width: 100%;
     height: auto;
     box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
-}
-.news h1 {
+  }
+  .news h1 {
     width: 100%;
     height: auto;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     font-weight: 400;
-}
-.news p{
+  }
+  .news p {
     width: 100%;
     height: auto;
     font-weight: 200;
-}
-
-.icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fa-trash {
-    margin: 1rem;
-    color: black;
-    padding: 1.2rem;
-    border-radius: 40px;
-    transition: 0.3s;
-}.fa-trash:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-.fa-plus {
-    padding: 1.2rem;
-    border-radius: 40px;
-    margin: 2rem;
-    font-size: 2rem;
-    transition: 0.3s;
-}.fa-plus:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-.fa-pencil-square-o {
-    padding: 1.1rem;
-    border-radius: 40px;
-    margin: 1rem;
-    font-size: 2rem;
-    transition: 0.3s;
-}.fa-pencil-square-o:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-}
-
-
-@media screen and (max-width: 1080px) {
-    #container {
-        background-color: white;
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-left: 0;
-        margin-top: 2%;
-        margin-bottom: 2%;
-        padding: 1rem;
-        padding-bottom: 5rem;
-    }
-    .header, .header h1{
-        font-family: 'Caveat';
-        font-size: 5rem;
-        margin: 1%;
-        text-align: center;
-    }
-    
-    #news-containers {
-        display: flex;
-        background-color: rgb(245, 245, 245);
-        padding: 2rem;
-        width: 95%;
-        height: auto;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
-    }
-    
-    .news {
-        text-align: center;
-        background-color: white;
-        width: 100%;
-        height: auto;
-        padding: 1.5rem;
-        margin: 1.5rem;
-        transition: 0.2s;
-    }.news:hover {
-        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
-        margin: 1.6rem;
-        transform: scale(1.05);
-    }.news:active{
-        opacity: 90%;
-    }
-    .news img{
-        width: 100%;
-        height: auto;
-        box-shadow: 0 10px 15px rgb(0 0 0 / 0.4);
-    }
-    .news h1 {
-        width: 100%;
-        height: auto;
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-        font-weight: 400;
-    }
-    .news p{
-        width: 100%;
-        height: auto;
-        font-weight: 200;
-    }
-    
+  }
 }

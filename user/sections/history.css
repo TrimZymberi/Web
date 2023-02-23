@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -140,7 +140,8 @@ span {
   font-weight: 600;
 }
 
-h2, p {
+h2,
+p {
   margin: 1rem;
 }
 

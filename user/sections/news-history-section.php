@@ -17,10 +17,8 @@ session_start();
 <body>
 
     <?php
-    if
-    (isset($_SESSION["userid"])) {
-        if
-        ($_SESSION['usrtype'] == "admin") { ?>
+    if (isset($_SESSION["userid"])) {
+        if ($_SESSION['usrtype'] == "admin") { ?>
             <div class="homeback">
                 <a href="../../Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
             </div>
@@ -31,20 +29,18 @@ session_start();
             <?php
             try {
 
-                $username = "root";
-                $password = "";
-                $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
+                include "../../packages/database-pkg.php";
+                $news = new Database();
+                $pdo = $news->connect();
 
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $news = $pdo->prepare("SELECT n.news_id, n.news_header, n.created_date, u.user_username FROM news n INNER JOIN users u ON n.user_id = u.user_id");
+                $news->execute();
 
-                $stmt = $pdo->prepare("SELECT n.news_id, n.news_header, n.created_date, u.user_username FROM news n INNER JOIN users u ON n.user_id = u.user_id");
-                $stmt->execute();
-
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                while ($row = $news->fetch(PDO::FETCH_ASSOC)) {
                     $admin_name = $row['user_username'];
                     $header = $row['news_header'];
                     $createdDate = $row['created_date'];
-                    ?>
+            ?>
 
 
                     <ul class="users-list">
@@ -59,13 +55,12 @@ session_start();
                         </p>
                     </ul>
 
-                    <?php
+    <?php
                 }
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
             $pdo = null;
-
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }

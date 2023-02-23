@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap");
 
 * {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    margin: 0;
-    padding: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: rgb(255,241,195);
-  background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
+  background: rgb(255, 241, 195);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 195, 1) 0%,
+    rgba(247, 228, 163, 1) 24%,
+    rgba(255, 74, 121, 1) 90%
+  );
   background-attachment: fixed;
 }
 
@@ -31,8 +36,9 @@ body {
   border-radius: 30px;
   opacity: 80%;
   transition: 0.2s;
-}.fa-home:hover {
- opacity: 100%; 
+}
+.fa-home:hover {
+  opacity: 100%;
 }
 #whole-box {
   margin-top: 1rem;
@@ -45,7 +51,6 @@ body {
   height: 100vh;
   background-color: transparent;
 }
-
 
 .form-control {
   display: inline-block;
@@ -84,14 +89,17 @@ body {
   flex-direction: column;
   width: 100%;
   padding: 10px;
-}.form-group input {
+}
+.form-group input {
   width: 90%;
   padding: 10px;
   border-radius: 40px;
   border: none;
   outline: none;
-  background-color: rgb(236, 234, 234);  
-}.form-group label,.form-group p {
+  background-color: rgb(236, 234, 234);
+}
+.form-group label,
+.form-group p {
   font-size: 15px;
   padding: 10px;
 }
@@ -110,12 +118,11 @@ body {
   color: white;
   background-color: #000000;
   font-weight: 600;
-  
-  
+
   opacity: 90%;
   cursor: pointer;
   transition: 0.5s;
-}.submit-button:hover {
+}
+.submit-button:hover {
   opacity: 100%;
 }
-
