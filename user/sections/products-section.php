@@ -36,11 +36,11 @@ session_start();
                     </div>
                     <div class="menu-section">
 
-                        <label for="news"><a href="news-add-section.php">
+                        <label for="news"><a href="products-add-section.php">
                                 Products Add Section
                             </a></label>
 
-                        <label for="news"><a href="news-edit-section.php">
+                        <label for="news"><a href="products-edit-section.php">
                                 Products Edit Section
                             </a></label>
 
