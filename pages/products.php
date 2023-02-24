@@ -77,7 +77,7 @@ session_start();
                             if ($_SESSION['usrtype'] == "admin") {
                         ?>
                                 <div class="product">
-                                    <a href="products-links/<?php echo $link; ?>">
+                                    <a href="<?php echo $link; ?>">
                                         <img src="../images/<?php echo $image; ?>" alt="">
                                         <h1>
                                             <?php echo $header; ?>
@@ -102,7 +102,7 @@ session_start();
                             } else {
                             ?>
                                 <div class="product">
-                                    <a href="product-links/<?php echo $link; ?>">
+                                    <a href="<?php echo $link; ?>">
                                         <img src="../images/<?php echo $image; ?>" alt="">
                                         <h1>
                                             <?php echo $header; ?>
@@ -123,7 +123,7 @@ session_start();
                         } else {
                             ?>
                             <div class="product">
-                                <a href="product-links/<?php echo $link; ?>">
+                                <a href="<?php echo $link; ?>">
                                     <img src="../images/<?php echo $image; ?>" alt="">
                                     <h1>
                                         <?php echo $header; ?>
