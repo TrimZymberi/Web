@@ -33,16 +33,19 @@ session_start();
 
 
             if (isset($_SESSION["userid"])) {
+                // ADMIN
                 if ($_SESSION['usrtype'] == "admin") {
             ?>
                     <li><a href="auth/logout.php" class="nav-links">Logout</a></li>
                     <li><a href="user/dashboard.php" class="home">Dashboard</a></li>
                 <?php
+                // USER
                 } else {
                 ?>
                     <li><a href="auth/logout.php" class="nav-links">Logout</a></li>
                 <?php
                 }
+                // GUEST
             } else {
                 ?>
                 <li><a href="joinus/accountType/individualaccount.php" class="nav-links">Register</a></li>

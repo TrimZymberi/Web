@@ -119,7 +119,7 @@ session_start();
             ?>
             <?php
             if (isset($_SESSION["userid"])) {
-
+                // ADMIN
                 if ($_SESSION['usrtype'] == "admin") {
             ?>
                     <div class="news">

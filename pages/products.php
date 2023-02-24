@@ -99,6 +99,7 @@ session_start();
                                     </div>
                                 </div>
                             <?php
+                            // USER
                             } else {
                             ?>
                                 <div class="product">
@@ -120,6 +121,7 @@ session_start();
                                 </div>
                             <?php
                             }
+                            // GUEST
                         } else {
                             ?>
                             <div class="product">
@@ -132,7 +134,7 @@ session_start();
                                         <?php echo $price; ?>$
                                     </p>
                                 </a>
-                                <a href="../joinus/login.php">
+                                <a href="../joinus/login.php?error=usernotfound">
                                     <div class="consumer-button">
                                         <button>
                                             <i class="fa fa-heart" aria-hidden="true"></i>
@@ -152,7 +154,7 @@ session_start();
             }
             $pdo = null;
             if (isset($_SESSION["userid"])) {
-
+                // ADMIN
                 if ($_SESSION['usrtype'] == "admin") {
                     ?>
                     <div class="product">

@@ -33,6 +33,7 @@ if (isset($_GET['id'])) {
 <body>
 
     <?php
+    // ADMIN
     if (isset($_SESSION["userid"])) {
         if ($_SESSION['usrtype'] == "admin") {
     ?>
@@ -78,9 +79,11 @@ if (isset($_GET['id'])) {
 
 
     <?php
+            // USER
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }
+        // GUEST
     } else {
         header("location: /web/Kartell.php?error=usernotfound");
     }

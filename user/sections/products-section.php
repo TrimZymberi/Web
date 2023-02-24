@@ -18,6 +18,7 @@ session_start();
 
     <?php
     if (isset($_SESSION["userid"])) {
+        // ADMIN
         if ($_SESSION['usrtype'] == "admin") {
     ?>
 
@@ -54,9 +55,11 @@ session_start();
 
 
     <?php
+            // USER
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }
+        // GUEST
     } else {
         header("location: /web/Kartell.php?error=usernotfound");
     }

@@ -12,10 +12,10 @@ if (isset($_GET['id'])) {
     $news->execute(array($id));
     $row = $news->fetch(PDO::FETCH_ASSOC);
     if (!$row) {
-        header("location: /web/Kartell.php?error=newsnotfound");
+        header("location: /web/pages/news.php?error=newsnotfound");
     }
 } else {
-    header("location: /web/Kartell.php?error=noID");
+    header("location: /web/pages/news.php?error=noID");
 }
 ?>
 <!DOCTYPE html>
@@ -35,6 +35,7 @@ if (isset($_GET['id'])) {
 
     <?php
     if (isset($_SESSION["userid"])) {
+        // ADMIN
         if ($_SESSION['usrtype'] == "admin") {
     ?>
 
@@ -87,9 +88,11 @@ if (isset($_GET['id'])) {
 
 
     <?php
+            // USER
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }
+        // GUEST
     } else {
         header("location: /web/Kartell.php?error=usernotfound");
     }

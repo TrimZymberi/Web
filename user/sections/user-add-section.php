@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,35 +15,50 @@
 </head>
 
 <body>
-    <div class="homeback">
-        <a href="../login.php"><i class="fa fa-home" aria-hidden="true"></i></a>
-    </div>
 
-    <div class="complete" id="whole-box">
-        <form action="../../auth/register.php" method="post" id="account-form">
-            <h1 id="header-h1" for="form-group" class="headline">Creating an User Account</h1>
-
-            <div class="form-group">
-                <label id="name-label" for="name">Username</label>
-                <input type="text" name="username" id="first-name" class="form-control" placeholder="Write your first name.">
+    <?php
+    // ADMIN
+    if (isset($_SESSION["userid"])) {
+        if ($_SESSION['usrtype'] == "admin") { ?>
+            <div class="homeback">
+                <a href="../login.php"><i class="fa fa-home" aria-hidden="true"></i></a>
             </div>
 
-            <div class="form-group">
-                <label id="email-label" for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email">
-            </div>
+            <div class="complete" id="whole-box">
+                <form action="../../auth/register.php" method="post" id="account-form">
+                    <h1 id="header-h1" for="form-group" class="headline">Creating an User Account</h1>
 
-            <div class="form-group">
-                <label id="password-label" for="password">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Must be at least 8 characters">
-            </div>
+                    <div class="form-group">
+                        <label id="name-label" for="name">Username</label>
+                        <input type="text" name="username" id="first-name" class="form-control" placeholder="Write your first name.">
+                    </div>
 
-            <div id="submit">
-                <button type="submit" name="submit" class="submit-button">Create User</button>
-            </div>
+                    <div class="form-group">
+                        <label id="email-label" for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email">
+                    </div>
 
-        </form>
-    </div>
+                    <div class="form-group">
+                        <label id="password-label" for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Must be at least 8 characters">
+                    </div>
+
+                    <div id="submit">
+                        <button type="submit" name="submit" class="submit-button">Create User</button>
+                    </div>
+
+                </form>
+            </div>
+    <?php
+            // USER
+        } else {
+            header("location: /web/Kartell.php?error=usernotfound");
+        }
+        // GUEST
+    } else {
+        header("location: /web/Kartell.php?error=usernotfound");
+    }
+    ?>
 </body>
 
 </html>
