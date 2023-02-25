@@ -42,13 +42,11 @@ session_start();
             </div>
 
             <div class="form-group">
-                <div class="error">
-                    <?php
-                    if (isset($_GET['error'])) {
-                        echo '<p class="error-message" id="error-label">' . $_GET['error'] . '</p>';
-                    }
-                    ?>
-                </div>
+                        <?php
+                        if (isset($_GET['error'])) {
+                            echo '<p class="error-message" id="error-label">' . $_GET['error'] . '</p>';
+                        }
+                        ?>
             </div>
 
             <div id="submit">
@@ -56,7 +54,6 @@ session_start();
             </div>
 
         </form>
-
     </div>
 </body>
 

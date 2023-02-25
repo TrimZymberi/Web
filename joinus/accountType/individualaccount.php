@@ -42,13 +42,11 @@
             </div>
 
             <div class="form-group">
-                <div class="error">
                 <?php
                 if (isset($_GET['error'])) {
                     echo '<p class="error-message" id="error-label">' . $_GET['error'] . '</p>';
                 }
                 ?>
-                </div>
             </div>
 
             <div id="submit">
@@ -56,6 +54,7 @@
             </div>
 
         </form>
+
     </div>
 
 </body>

@@ -146,6 +146,7 @@ body {
 }
 
 #error-label {
+  margin-left: 1%;
   width: 90%;
   color: white;
   padding-bottom: 10px;
@@ -286,6 +287,7 @@ body {
     margin-top: -1%;
   }
   #error-label {
+    margin-left: 1%;
     width: 100%;
     color: white;
     padding-bottom: 10px;
@@ -297,7 +299,7 @@ body {
   }
   .error-message {
     margin-bottom: 5%;
-    margin-top: -3%;
+    margin-top: -6%;
   }
 }
 

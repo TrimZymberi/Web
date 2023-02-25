@@ -132,6 +132,8 @@ body {
     margin-top: -1%;
 }
 #error-label {
+  margin-left: 1%;
+  width: 90%;
   color: white;
   padding: 10px;
   opacity: 85%;
@@ -139,7 +141,7 @@ body {
   font-weight: 200;
   background-color: #ff4a79;
 }
-.error {
+.error-message {
     margin-bottom: 5%;
     margin-top: -5%;
 }
@@ -265,6 +267,8 @@ body {
       margin-top: -1%;
   }
   #error-label {
+    margin-left: 1%;
+    width: 100%;
     color: white;
     padding: 10px;
     opacity: 85%;
@@ -272,7 +276,7 @@ body {
     font-weight: 200;
     background-color: #ff4a79;
   }
-  .error {
+  .error-message {
       margin-bottom: 5%;
       margin-top: -5%;
   }
@@ -401,13 +405,15 @@ body {
   }
   #error-label {
     color: white;
+    margin-left: 1%;
+    width: 100%;
     padding: 10px;
     opacity: 85%;
     font-size: 12px;
     font-weight: 200;
     background-color: #ff4a79;
   }
-  .error {
+  .error-message {
       margin-bottom: 5%;
       margin-top: -5%;
   }
