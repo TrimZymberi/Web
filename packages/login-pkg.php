@@ -15,7 +15,7 @@ class Login extends Database
         if($arg->rowCount() == 0)
         {
             $arg = null;
-            header("location: /web/Kartell.php?error=usernotfound");
+            header("location: /web/joinus/login.php?error=User was not found.");
             exit();
         }
 
@@ -26,7 +26,7 @@ class Login extends Database
         if($checkPassword == false)
         {
             $arg = null;
-            header("location: /web/Kartell.php?error=wrongpassword");
+            header("location: /web/joinus/login.php?error=Wrong password.");
             exit();
         }
         elseif ($checkPassword == true)
@@ -43,7 +43,7 @@ class Login extends Database
             if($arg->rowCount() == 0)
             {
                 $arg = null;
-                header("location: /web/Kartell.php?error=profilenotfound");
+                header("location: /web/joinus/login.php?error=Profile was not found.");
                 exit();
             }
 

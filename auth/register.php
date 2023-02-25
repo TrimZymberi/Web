@@ -15,4 +15,6 @@ if(isset($_POST["submit"])) {
     $register = new regControl($username, $email, $password);
 
     $register->userRegister();
+
+    header("location: /web/Kartell.php?error=none");
 }

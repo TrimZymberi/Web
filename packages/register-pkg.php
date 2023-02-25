@@ -9,7 +9,6 @@ class Register extends Database
 
         $arg;
         if($arg->execute(array($username, $hashedpassword, $email))) {
-            
             header("location: /web/Kartell.php?error=none");
             exit();
         } else {
