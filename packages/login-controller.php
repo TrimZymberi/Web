@@ -14,7 +14,7 @@ class logControl extends Login
     public function loginUser()
     {
         if ($this->emptyInput() == false) {
-            header("location: /web/Kartell.php?error=emptyinput");
+            header("location: /web/joinus/login.php?error=Please fill in all the fields.");
             exit();
         }
 

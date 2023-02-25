@@ -29,11 +29,9 @@ session_start();
             <?php
             try {
 
-                $username = "root";
-                $password = "";
-                $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
-
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                include "../packages/database-pkg.php";
+                $news = new Database();
+                $pdo = $news->connect();
 
                 $stmt = $pdo->prepare("SELECT * FROM news");
                 $stmt->execute();

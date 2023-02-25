@@ -15,6 +15,4 @@ if(isset($_POST["submit"])) {
     $login = new logControl($username, $password);
 
     $login->loginUser();
-
-    header("location: /web/Kartell.php?error=none");
 }

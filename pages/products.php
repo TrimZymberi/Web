@@ -38,10 +38,9 @@ session_start();
         <div id="product-containers">
             <?php
             try {
-                $username = "root";
-                $password = "";
-                $pdo = new PDO('mysql:host=localhost;dbname=dbkartell', $username, $password);
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                include "../packages/database-pkg.php";
+                $products = new Database();
+                $pdo = $products->connect();
 
                 if (isset($_GET["product_name"]) && !empty($_GET["product_name"])) {
                     $product_name = "%{$_GET['product_name']}%";

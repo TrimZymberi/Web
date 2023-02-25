@@ -5,7 +5,6 @@ class regControl extends Register
     private $username;
     private $email;
     private $password;
-
     public function __construct($username, $email, $password)
     {
         $this->username = $username;
@@ -15,23 +14,23 @@ class regControl extends Register
     public function userRegister()
     {
         if($this->emptyInput() == false) {
-            header("location: /web/Kartell.php?error=emptyinput");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Please fill in all the fields.");
             exit();
         }
         if($this->regexUsername() == false) {
-            header("location: /web/Kartell.php?error=username");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Username should start with a capital letter,and be between 4 and 15 characters long.");
             exit();
         }
         if($this->regexEmail() == false) {
-            header("location: /web/Kartell.php?error=email");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Invalid email");
             exit();
         }
         if($this->regexPassword() == false) {
-            header("location: /web/Kartell.php?error=password");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit");
             exit();
         }
         if($this->nameCheck() == false) {
-            header("location: /web/Kartell.php?error=sameuser");
+            header("location: /web/joinus/accountType/individualaccount.php?error=This user already exists");
             exit();
         }
 
@@ -86,5 +85,4 @@ class regControl extends Register
         }
         return $arg;
     }
-
 }
