@@ -33,8 +33,8 @@ if (isset($_GET['id'])) {
 <body>
 
     <?php
-    // ADMIN
     if (isset($_SESSION["userid"])) {
+        // ADMIN
         if ($_SESSION['usrtype'] == "admin") {
     ?>
             <div class="homeback">

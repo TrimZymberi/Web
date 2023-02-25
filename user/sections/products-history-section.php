@@ -18,6 +18,7 @@ session_start();
 
     <?php
     if (isset($_SESSION["userid"])) {
+        // ADMIN
         if ($_SESSION['usrtype'] == "admin") { ?>
             <div class="homeback">
                 <a href="../../Kartell.php"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -61,9 +62,11 @@ session_start();
                 echo "Error: " . $e->getMessage();
             }
             $pdo = null;
+            // USER
         } else {
             header("location: /web/Kartell.php?error=usernotfound");
         }
+        // GUEST
     } else {
         header("location: /web/Kartell.php?error=usernotfound");
     }

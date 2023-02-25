@@ -19,7 +19,7 @@ class userEdit extends Database
                 exit();
             }
         } else {
-            header("location: /web/Kartell.php?error=noID");
+            header("location: /web/user/sections/users-section.php?error=noID");
         }
     }
 }

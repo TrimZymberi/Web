@@ -22,15 +22,15 @@ class regControl extends Register
             exit();
         }
         if($this->regexEmail() == false) {
-            header("location: /web/joinus/accountType/individualaccount.php?error=Invalid email");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Invalid email.");
             exit();
         }
         if($this->regexPassword() == false) {
-            header("location: /web/joinus/accountType/individualaccount.php?error=Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit");
+            header("location: /web/joinus/accountType/individualaccount.php?error=Password must be at least 8 characters long,contain at least one uppercase letter,one lowercase letter and one digit.");
             exit();
         }
         if($this->nameCheck() == false) {
-            header("location: /web/joinus/accountType/individualaccount.php?error=This user already exists");
+            header("location: /web/joinus/accountType/individualaccount.php?error=This user already exists.");
             exit();
         }
 

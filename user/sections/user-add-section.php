@@ -17,8 +17,8 @@ session_start();
 <body>
 
     <?php
-    // ADMIN
     if (isset($_SESSION["userid"])) {
+        // ADMIN
         if ($_SESSION['usrtype'] == "admin") { ?>
             <div class="homeback">
                 <a href="../login.php"><i class="fa fa-home" aria-hidden="true"></i></a>
