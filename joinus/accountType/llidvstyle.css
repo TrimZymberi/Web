@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap");
 
 * {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    margin: 0;
-    padding: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: rgb(255,241,195);
-  background: linear-gradient(360deg, rgba(255,241,195,1) 0%, rgba(247,228,163,1) 24%, rgba(255,74,121,1) 90%);
+  background: rgb(255, 241, 195);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 195, 1) 0%,
+    rgba(247, 228, 163, 1) 24%,
+    rgba(255, 74, 121, 1) 90%
+  );
   background-attachment: fixed;
 }
 
@@ -32,8 +37,9 @@ body {
   border-radius: 30px;
   opacity: 80%;
   transition: 0.2s;
-}.fa-home:hover {
- opacity: 100%; 
+}
+.fa-home:hover {
+  opacity: 100%;
 }
 
 .complete {
@@ -81,14 +87,17 @@ body {
   flex-direction: column;
   width: 100%;
   padding: 10px;
-}.form-group input {
+}
+.form-group input {
   width: 90%;
   padding: 10px;
   border-radius: 40px;
   border: none;
   outline: none;
-  background-color: rgb(236, 234, 234);  
-}.form-group label,.form-group p {
+  background-color: rgb(236, 234, 234);
+}
+.form-group label,
+.form-group p {
   font-size: 15px;
   padding: 10px;
 }
@@ -107,12 +116,12 @@ body {
   color: white;
   background-color: #000000;
   font-weight: 600;
-  
-  
+
   opacity: 90%;
   cursor: pointer;
   transition: 0.5s;
-}.submit-button:hover {
+}
+.submit-button:hover {
   opacity: 100%;
 }
 
@@ -127,16 +136,17 @@ body {
   padding-top: 10px;
   font-size: 14px;
   font-weight: 200;
-}#reference-label:hover {
+}
+#reference-label:hover {
   opacity: 100%;
 }
 .ref {
-    margin-bottom: 5%;
-    margin-top: -1%;
-
+  margin-bottom: 5%;
+  margin-top: -1%;
 }
 
 #error-label {
+  width: 90%;
   color: white;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -146,8 +156,8 @@ body {
   background-color: #ff4a79;
 }
 .error-message {
-    margin-bottom: 5%;
-    margin-top: -6%;
+  margin-bottom: 5%;
+  margin-top: -6%;
 }
 
 @media screen and (max-width: 520px) {
@@ -167,10 +177,11 @@ body {
     border-radius: 30px;
     opacity: 80%;
     transition: 0.2s;
-  }.fa-home:hover {
-   opacity: 100%; 
   }
-  
+  .fa-home:hover {
+    opacity: 100%;
+  }
+
   .complete {
     display: flex;
     flex-flow: column;
@@ -178,7 +189,7 @@ body {
     width: 100%;
     height: auto;
   }
-  
+
   #account-form {
     display: flex;
     position: absolute;
@@ -192,43 +203,46 @@ body {
     padding: 10px;
     margin-top: 4%;
   }
-  
+
   .form-control {
-      display: inline-block;
-      vertical-align: middle;
-      
-      padding: 10px;
-      border-radius: 80px;
-      border: none;
-      outline: none;
-      background-color: rgb(236, 234, 234);
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 10px;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 234, 234);
   }
-  
+
   .headline {
     font-weight: 600;
     font-size: 24px;
     text-align: center;
     padding: 15px;
   }
-  
+
   .form-group {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin-left: -5%;
     padding: 8px;
-  }.form-group input {
+  }
+  .form-group input {
     width: 100%;
     padding: 8px;
     border-radius: 40px;
     border: none;
     outline: none;
-    background-color: rgb(236, 234, 234);  
-  }.form-group label,.form-group p {
+    background-color: rgb(236, 234, 234);
+  }
+  .form-group label,
+  .form-group p {
     font-size: 14px;
     padding: 8px;
   }
-  
+
   .submit-button {
     position: relative;
     align-items: center;
@@ -243,19 +257,19 @@ body {
     color: white;
     background-color: #000000;
     font-weight: 600;
-    
-    
+
     opacity: 90%;
     cursor: pointer;
     transition: 0.5s;
-  }.submit-button:hover {
+  }
+  .submit-button:hover {
     opacity: 100%;
   }
-  
+
   #age {
     color: rgb(117, 117, 117);
   }
-  
+
   #reference-label {
     color: black;
     opacity: 80%;
@@ -263,24 +277,27 @@ body {
     padding-top: 10px;
     font-size: 14px;
     font-weight: 200;
-  }#reference-label:hover {
+  }
+  #reference-label:hover {
     opacity: 100%;
   }
   .ref {
-      margin-bottom: 5%;
-      margin-top: -1%;
+    margin-bottom: 5%;
+    margin-top: -1%;
   }
   #error-label {
+    width: 100%;
     color: white;
-    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     opacity: 85%;
     font-size: 12px;
     font-weight: 200;
     background-color: #ff4a79;
   }
-  .error {
-      margin-bottom: 5%;
-      margin-top: -5%;
+  .error-message {
+    margin-bottom: 5%;
+    margin-top: -3%;
   }
 }
 
@@ -302,10 +319,11 @@ body {
     border-radius: 30px;
     opacity: 80%;
     transition: 0.2s;
-  }.fa-home:hover {
-   opacity: 100%; 
   }
-  
+  .fa-home:hover {
+    opacity: 100%;
+  }
+
   .complete {
     display: flex;
     flex-flow: column;
@@ -313,7 +331,7 @@ body {
     width: 100%;
     height: auto;
   }
-  
+
   #account-form {
     display: flex;
     position: absolute;
@@ -327,43 +345,46 @@ body {
     padding: 10px;
     margin-top: 4%;
   }
-  
+
   .form-control {
-      display: inline-block;
-      vertical-align: middle;
-      
-      padding: 10px;
-      border-radius: 80px;
-      border: none;
-      outline: none;
-      background-color: rgb(236, 234, 234);
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 10px;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 234, 234);
   }
-  
+
   .headline {
     font-weight: 600;
     font-size: 24px;
     text-align: center;
     padding: 15px;
   }
-  
+
   .form-group {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin-left: -5%;
     padding: 8px;
-  }.form-group input {
+  }
+  .form-group input {
     width: 100%;
     padding: 8px;
     border-radius: 40px;
     border: none;
     outline: none;
-    background-color: rgb(236, 234, 234);  
-  }.form-group label,.form-group p {
+    background-color: rgb(236, 234, 234);
+  }
+  .form-group label,
+  .form-group p {
     font-size: 14px;
     padding: 8px;
   }
-  
+
   .submit-button {
     position: relative;
     align-items: center;
@@ -378,16 +399,15 @@ body {
     color: white;
     background-color: #000000;
     font-weight: 600;
-    
-    
+
     opacity: 90%;
     cursor: pointer;
     transition: 0.5s;
-  }.submit-button:hover {
+  }
+  .submit-button:hover {
     opacity: 100%;
   }
 
-  
   #reference-label {
     color: black;
     opacity: 80%;
@@ -395,24 +415,27 @@ body {
     padding-top: 10px;
     font-size: 12px;
     font-weight: 200;
-  }#reference-label:hover {
+  }
+  #reference-label:hover {
     opacity: 100%;
   }
   .ref {
-      margin-bottom: 5%;
-      margin-top: -1%;
+    margin-bottom: 5%;
+    margin-top: -1%;
   }
   #error-label {
+    width: 100%;
     color: white;
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     opacity: 85%;
     font-size: 12px;
     font-weight: 200;
     background-color: #ff4a79;
   }
-  .error {
-      margin-bottom: 5%;
-      margin-top: -5%;
-      margin-left: 1%;
+  .error-message {
+    margin-bottom: 5%;
+    margin-top: -3%;
+    margin-left: 1%;
   }
 }
