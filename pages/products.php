@@ -133,7 +133,7 @@ session_start();
                                         <?php echo $price; ?>$
                                     </p>
                                 </a>
-                                <a href="../joinus/login.php?error=usernotfound">
+                                <a href="../joinus/login.php?error=You need to be logged in to buy items.">
                                     <div class="consumer-button">
                                         <button>
                                             <i class="fa fa-heart" aria-hidden="true"></i>
